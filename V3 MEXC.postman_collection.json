@@ -1,0 +1,865 @@
+{
+	"info": {
+		"_postman_id": "7f450cf7-e492-4cb8-8296-3560d3f37e93",
+		"name": "New MEXC",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Market Date Endpoints",
+			"item": [
+				{
+					"name": "Test Connectivity",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{api_url}}/api/v3/ping",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"api",
+								"v3",
+								"ping"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Check Server Time",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{api_url}}/api/v3/time",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"api",
+								"v3",
+								"time"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Exchange Information",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{api_url}}/api/v3/exchangeInfo",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"api",
+								"v3",
+								"exchangeInfo"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Order Book",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{api_url}}/api/v3/depth?symbol=BTCUSDT",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"api",
+								"v3",
+								"depth"
+							],
+							"query": [
+								{
+									"key": "symbol",
+									"value": "BTCUSDT",
+									"description": "Symbol"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Recent Trades List",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{api_url}}/api/v3/trades?symbol=BTCUSDT",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"api",
+								"v3",
+								"trades"
+							],
+							"query": [
+								{
+									"key": "symbol",
+									"value": "BTCUSDT",
+									"description": "Symbol"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Old Trade Lookup",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{api_url}}/api/v3/historicalTrades?symbol=BTCUSDT",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"api",
+								"v3",
+								"historicalTrades"
+							],
+							"query": [
+								{
+									"key": "symbol",
+									"value": "BTCUSDT",
+									"description": "Symbol"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Compressed/Aggregate Trades List",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{api_url}}/api/v3/aggTrades?symbol=BTCUSDT",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"api",
+								"v3",
+								"aggTrades"
+							],
+							"query": [
+								{
+									"key": "symbol",
+									"value": "BTCUSDT"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Kline/Candlestick Data",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{api_url}}/api/v3/klines?symbol=BTCUSDT&interval=1m",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"api",
+								"v3",
+								"klines"
+							],
+							"query": [
+								{
+									"key": "symbol",
+									"value": "BTCUSDT",
+									"description": "Symbol"
+								},
+								{
+									"key": "interval",
+									"value": "1m",
+									"description": "ENUM: Kline interval"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Current Average Price",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{api_url}}/api/v3/avgPrice?symbol=BTCUSDT",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"api",
+								"v3",
+								"avgPrice"
+							],
+							"query": [
+								{
+									"key": "symbol",
+									"value": "BTCUSDT",
+									"description": "Symbol"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "24hr Ticker Price Change Statistics",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{api_url}}/api/v3/ticker/24hr",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"api",
+								"v3",
+								"ticker",
+								"24hr"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Symbol Price Ticker",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{api_url}}/api/v3/ticker/price",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"api",
+								"v3",
+								"ticker",
+								"price"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Symbol Order Book Ticker",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{api_url}}/api/v3/ticker/bookTicker",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"api",
+								"v3",
+								"ticker",
+								"bookTicker"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Spot Account/Trade",
+			"item": [
+				{
+					"name": "Test New Order",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-mexc-apikey",
+								"value": "{{api_key}}",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{api_url}}/api/v3/order/test?symbol=BTCUSDT&side=BUY&type=LIMIT&quantity=0.0002&price=30000&timestamp={{timestamp}}&signature={{signature}}",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"api",
+								"v3",
+								"order",
+								"test"
+							],
+							"query": [
+								{
+									"key": "symbol",
+									"value": "BTCUSDT",
+									"description": "Symbol"
+								},
+								{
+									"key": "side",
+									"value": "BUY",
+									"description": "ENUM：Order Side"
+								},
+								{
+									"key": "type",
+									"value": "LIMIT",
+									"description": "ENUM：Order Type"
+								},
+								{
+									"key": "quantity",
+									"value": "0.0002",
+									"description": "Quantity"
+								},
+								{
+									"key": "price",
+									"value": "30000",
+									"description": "Price"
+								},
+								{
+									"key": "timestamp",
+									"value": "{{timestamp}}"
+								},
+								{
+									"key": "signature",
+									"value": "{{signature}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New Order",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-mexc-apikey",
+								"value": "{{api_key}}",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "{{api_url}}/api/v3/order?symbol=BTCUSDT&side=BUY&type=LIMIT&quantity=0.0003&price=30000&timestamp={{timestamp}}&signature={{signature}}",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"api",
+								"v3",
+								"order"
+							],
+							"query": [
+								{
+									"key": "symbol",
+									"value": "BTCUSDT",
+									"description": "Symbol"
+								},
+								{
+									"key": "side",
+									"value": "BUY",
+									"description": "ENUM：Order Side"
+								},
+								{
+									"key": "type",
+									"value": "LIMIT",
+									"description": "ENUM：Order Type "
+								},
+								{
+									"key": "quantity",
+									"value": "0.0003",
+									"description": "Quantity"
+								},
+								{
+									"key": "quoteOrderQty",
+									"value": "100",
+									"description": "Quote order quantity (For type: MARKET)",
+									"disabled": true
+								},
+								{
+									"key": "price",
+									"value": "30000",
+									"description": "Price"
+								},
+								{
+									"key": "timestamp",
+									"value": "{{timestamp}}"
+								},
+								{
+									"key": "signature",
+									"value": "{{signature}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Cancel Orde",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "x-mexc-apikey",
+								"value": "{{api_key}}",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{api_url}}/api/v3/order?symbol=BTCUSDT&orderId=135598325645746176&timestamp={{timestamp}}&signature={{signature}}",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"api",
+								"v3",
+								"order"
+							],
+							"query": [
+								{
+									"key": "symbol",
+									"value": "BTCUSDT",
+									"description": "Symbol"
+								},
+								{
+									"key": "orderId",
+									"value": "135598325645746176",
+									"description": "Order id"
+								},
+								{
+									"key": "timestamp",
+									"value": "{{timestamp}}"
+								},
+								{
+									"key": "signature",
+									"value": "{{signature}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Cancel all Open Orders on a Symbol",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "x-mexc-apikey",
+								"value": "{{api_key}}",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{api_url}}/api/v3/openOrders?symbol=BTCUSDT&timestamp={{timestamp}}&signature={{signature}}",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"api",
+								"v3",
+								"openOrders"
+							],
+							"query": [
+								{
+									"key": "symbol",
+									"value": "BTCUSDT",
+									"description": "Symbol"
+								},
+								{
+									"key": "timestamp",
+									"value": "{{timestamp}}"
+								},
+								{
+									"key": "signature",
+									"value": "{{signature}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Query Order",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-mexc-apikey",
+								"value": "{{api_key}}",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{api_url}}/api/v3/order?symbol=BTCUSDT&orderId=129402018493145088&timestamp={{timestamp}}&signature={{signature}}",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"api",
+								"v3",
+								"order"
+							],
+							"query": [
+								{
+									"key": "symbol",
+									"value": "BTCUSDT",
+									"description": "Symbol"
+								},
+								{
+									"key": "orderId",
+									"value": "129402018493145088",
+									"description": "Order id"
+								},
+								{
+									"key": "timestamp",
+									"value": "{{timestamp}}"
+								},
+								{
+									"key": "signature",
+									"value": "{{signature}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Current Open Orders",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-mexc-apikey",
+								"value": "{{api_key}}",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{api_url}}/api/v3/openOrders?symbol=BTCUSDT&timestamp={{timestamp}}&signature={{signature}}",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"api",
+								"v3",
+								"openOrders"
+							],
+							"query": [
+								{
+									"key": "symbol",
+									"value": "BTCUSDT",
+									"description": "Symbol"
+								},
+								{
+									"key": "timestamp",
+									"value": "{{timestamp}}"
+								},
+								{
+									"key": "signature",
+									"value": "{{signature}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "All Orders",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-mexc-apikey",
+								"value": "{{api_key}}",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{api_url}}/api/v3/allOrders?symbol=BTCUSDT&timestamp={{timestamp}}&signature={{signature}}",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"api",
+								"v3",
+								"allOrders"
+							],
+							"query": [
+								{
+									"key": "symbol",
+									"value": "BTCUSDT",
+									"description": "Symbol"
+								},
+								{
+									"key": "timestamp",
+									"value": "{{timestamp}}"
+								},
+								{
+									"key": "signature",
+									"value": "{{signature}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Account Information",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-mexc-apikey",
+								"value": "{{api_key}}",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{api_url}}/api/v3/account?timestamp={{timestamp}}&signature={{signature}}",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"api",
+								"v3",
+								"account"
+							],
+							"query": [
+								{
+									"key": "timestamp",
+									"value": "{{timestamp}}"
+								},
+								{
+									"key": "signature",
+									"value": "{{signature}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Account Trade List",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-mexc-apikey",
+								"value": "{{api_key}}",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{api_url}}/api/v3/myTrades?symbol=MXUSDT&timestamp={{timestamp}}&signature={{signature}}",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"api",
+								"v3",
+								"myTrades"
+							],
+							"query": [
+								{
+									"key": "symbol",
+									"value": "MXUSDT",
+									"description": "Symbol"
+								},
+								{
+									"key": "timestamp",
+									"value": "{{timestamp}}"
+								},
+								{
+									"key": "signature",
+									"value": "{{signature}}"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "EFT",
+			"item": [
+				{
+					"name": "ETF info",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{api_url}}/api/v3/etf/info",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"api",
+								"v3",
+								"etf",
+								"info"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					"const ts = Date.now();",
+					"pm.environment.set(\"timestamp\", ts);",
+					"console.log('timestamp',ts);",
+					"",
+					"let paramsObject = {};",
+					"",
+					"const api_secret = pm.environment.get(\"api_secret\");",
+					"console.log('api_secret',api_secret);",
+					"console.log('x-mexc-apikey','mx06iq0Sg5Ga6VGCvs');",
+					"",
+					"const parameters = pm.request.url.query;",
+					"console.log('parameters', parameters);",
+					"parameters.map((param) => {",
+					"    if (param.key != 'signature' &&",
+					"        param.key != 'timestamp' &&",
+					"        !is_empty(param.value) &&",
+					"        !is_disabled(param.disabled)) {",
+					"        paramsObject[param.key] = param.value;",
+					"    }",
+					"})",
+					"",
+					"Object.assign(paramsObject, { 'timestamp': ts });",
+					"",
+					"if (api_secret) {",
+					"    let queryString = Object.keys(paramsObject).map((key) => {",
+					"        return `${key}=${paramsObject[key]}`;",
+					"    }).join('&');",
+					"    console.log('queryString',queryString);",
+					"    // queryString = \"timestamp=1645522175785\"",
+					"    // const api_secret = \"99d5cd6c195c4e97b3094578eaa9335c\"",
+					"    const signature = CryptoJS.HmacSHA256(queryString, api_secret).toString();",
+					"    console.log('signature',signature)",
+					"    pm.environment.set(\"signature\", signature);",
+					"}",
+					"",
+					"",
+					"",
+					"function is_disabled(str) {",
+					"    return str == true;",
+					"}",
+					"",
+					"function is_empty(str) {",
+					"    if (typeof str == 'undefined' ||",
+					"        !str ||",
+					"        str.length === 0 ||",
+					"        str === \"\" ||",
+					"        !/[^\\s]/.test(str) ||",
+					"        /^\\s*$/.test(str) ||",
+					"        str.replace(/\\s/g, \"\") === \"\") {",
+					"        return true;",
+					"    }",
+					"    else {",
+					"        return false;",
+					"    }",
+					"}"
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
