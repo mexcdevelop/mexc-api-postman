@@ -1,0 +1,1169 @@
+{
+	"info": {
+		"_postman_id": "5126ceea-b781-4249-be91-b2367c8b6aa1",
+		"name": "MEXC V2 spot",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "BaseInfo",
+			"item": [
+				{
+					"name": "symbols",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "ApiKey",
+								"value": "mx0ym92ZBe3t2Bk05e",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Request-Time",
+								"value": "{{timestamp}}",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Signature",
+								"value": "{{sign}}",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Recv-Window",
+								"value": "20",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{api_url}}/open/api/v2/market/symbols?symbol=CROGE_USDT",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"open",
+								"api",
+								"v2",
+								"market",
+								"symbols"
+							],
+							"query": [
+								{
+									"key": "symbol",
+									"value": "CROGE_USDT"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "servertime",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{api_url}}/open/api/v2/common/timestamp",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"open",
+								"api",
+								"v2",
+								"common",
+								"timestamp"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ping",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{api_url}}open/api/v2/common/ping",
+							"host": [
+								"{{api_url}}open"
+							],
+							"path": [
+								"api",
+								"v2",
+								"common",
+								"ping"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "api_default_symbols",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{api_url}}/open/api/v2/market/api_default_symbols",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"open",
+								"api",
+								"v2",
+								"market",
+								"api_default_symbols"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Market",
+			"item": [
+				{
+					"name": "Ticker",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{api_url}}/open/api/v2/market/ticker",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"open",
+								"api",
+								"v2",
+								"market",
+								"ticker"
+							],
+							"query": [
+								{
+									"key": "symbol",
+									"value": "BTC_USDT",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Depth",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{api_url}}/open/api/v2/market/depth?symbol=MX_USDT&depth=5",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"open",
+								"api",
+								"v2",
+								"market",
+								"depth"
+							],
+							"query": [
+								{
+									"key": "symbol",
+									"value": "MX_USDT"
+								},
+								{
+									"key": "depth",
+									"value": "5"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Deals",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{api_url}}/open/api/v2/market/deals?symbol=BTC_USDT&limit=100",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"open",
+								"api",
+								"v2",
+								"market",
+								"deals"
+							],
+							"query": [
+								{
+									"key": "symbol",
+									"value": "BTC_USDT"
+								},
+								{
+									"key": "limit",
+									"value": "100"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Kline",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{api_url}}/open/api/v2/market/kline?symbol=BTC_USDT&interval=60m&start=1648939318841&end=1649479318841",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"open",
+								"api",
+								"v2",
+								"market",
+								"kline"
+							],
+							"query": [
+								{
+									"key": "symbol",
+									"value": "BTC_USDT"
+								},
+								{
+									"key": "interval",
+									"value": "60m"
+								},
+								{
+									"key": "start",
+									"value": "1648939318841"
+								},
+								{
+									"key": "end",
+									"value": "1649479318841"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CoinList",
+					"protocolProfileBehavior": {
+						"strictSSL": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/open/api/v2/market/coin/list",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"open",
+								"api",
+								"v2",
+								"market",
+								"coin",
+								"list"
+							],
+							"query": [
+								{
+									"key": "currency",
+									"value": "MX",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "AccountInfo",
+			"item": [
+				{
+					"name": "account",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{api_url}}/open/api/v2/account/info",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"open",
+								"api",
+								"v2",
+								"account",
+								"info"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ApiSymbols",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{api_url}}/open/api/v2/market/api_symbols",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"open",
+								"api",
+								"v2",
+								"market",
+								"api_symbols"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "accountTransfer",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"sub_uid\": \"84888462\",\"currency\": \"USDT\",\"amount\": \"100\",\"type\": \"OUT\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api_url}}/open/api/v2/asset/account/transfer",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"open",
+								"api",
+								"v2",
+								"asset",
+								"account",
+								"transfer"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Subaccount",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{api_url}}/open/api/v2/account/sub-account/list",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"open",
+								"api",
+								"v2",
+								"account",
+								"sub-account",
+								"list"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "subaccountRecord",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{api_url}}/open/api/v2/asset/account/transfer/record",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"open",
+								"api",
+								"v2",
+								"asset",
+								"account",
+								"transfer",
+								"record"
+							],
+							"query": [
+								{
+									"key": "transact_id",
+									"value": "96ee5219c2ff4bcda4e5fa8353d6c43f",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Trade",
+			"item": [
+				{
+					"name": "PlaceOrder",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"console.log(pm.request)"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"tlsDisabledProtocols": []
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"order_type\": \"LIMIT_ORDER\",\"price\": \"0.0005\",\"quantity\": \"10000\",\"symbol\": \"CHAMP_USDT\",\"trade_type\": \"BID\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api_url}}/open/api/v2/order/place",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"open",
+								"api",
+								"v2",
+								"order",
+								"place"
+							],
+							"query": [
+								{
+									"key": "client_order_id",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CancelOrder",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api_url}}/open/api/v2/order/cancel?order_ids=648e97f3b1b545e69d3e81e173e6edda",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"open",
+								"api",
+								"v2",
+								"order",
+								"cancel"
+							],
+							"query": [
+								{
+									"key": "order_ids",
+									"value": "648e97f3b1b545e69d3e81e173e6edda"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "MuiltPlaceOrder",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[{\"order_type\": \"LIMIT_ORDER\",\"price\": \"4000\",\"quantity\": \"0.0002\",\"symbol\": \"BTC_USDT\",\"trade_type\": \"BID\"},{\"order_type\": \"LIMIT_ORDER\",\"price\": \"4000\",\"quantity\": \"0.0002\",\"symbol\": \"BTC_USDT\",\"trade_type\": \"BID\"}]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api_url}}/open/api/v2/order/place_batch",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"open",
+								"api",
+								"v2",
+								"order",
+								"place_batch"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetOpenOrder",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{api_url}}open/api/v2/order/open_orders?symbol=GAL3S_USDT",
+							"host": [
+								"{{api_url}}open"
+							],
+							"path": [
+								"api",
+								"v2",
+								"order",
+								"open_orders"
+							],
+							"query": [
+								{
+									"key": "symbol",
+									"value": "GAL3S_USDT"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetAllOrder",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{api_url}}/open/api/v2/order/list?states=NEW&symbol=BTC_USDT&trade_type=BID",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"open",
+								"api",
+								"v2",
+								"order",
+								"list"
+							],
+							"query": [
+								{
+									"key": "states",
+									"value": "NEW"
+								},
+								{
+									"key": "symbol",
+									"value": "BTC_USDT"
+								},
+								{
+									"key": "trade_type",
+									"value": "BID"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "QueryOrderById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{api_url}}/open/api/v2/order/query?order_ids=dae8c04c55934224ac950ab5610ba05d",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"open",
+								"api",
+								"v2",
+								"order",
+								"query"
+							],
+							"query": [
+								{
+									"key": "order_ids",
+									"value": "dae8c04c55934224ac950ab5610ba05d"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetOrderDeal",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{api_url}}/open/api/v2/order/deals?limit=1000&start_time=1635841039001&symbol=MX_USDT",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"open",
+								"api",
+								"v2",
+								"order",
+								"deals"
+							],
+							"query": [
+								{
+									"key": "limit",
+									"value": "1000"
+								},
+								{
+									"key": "start_time",
+									"value": "1635841039001"
+								},
+								{
+									"key": "symbol",
+									"value": "MX_USDT"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "QueryOrderDealById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{api_url}}/open/api/v2/order/deal_detail?order_id=a78d132ba8164d7f9d7e3de6c515c9c3",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"open",
+								"api",
+								"v2",
+								"order",
+								"deal_detail"
+							],
+							"query": [
+								{
+									"key": "order_id",
+									"value": "a78d132ba8164d7f9d7e3de6c515c9c3"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CancelBySymbol",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{api_url}}/open/api/v2/order/cancel_by_symbol?symbol=CHAMP_USDT",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"open",
+								"api",
+								"v2",
+								"order",
+								"cancel_by_symbol"
+							],
+							"query": [
+								{
+									"key": "symbol",
+									"value": "CHAMP_USDT"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Assets",
+			"item": [
+				{
+					"name": "GetDepositList",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{api_url}}/open/api/v2/asset/deposit/address/list?currency=MX",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"open",
+								"api",
+								"v2",
+								"asset",
+								"deposit",
+								"address",
+								"list"
+							],
+							"query": [
+								{
+									"key": "currency",
+									"value": "MX"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetDepositRecord",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{api_url}}/open/api/v2/asset/deposit/list?currency=USDT-TRX&end_time=1643532064000&start_time=1642668064000",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"open",
+								"api",
+								"v2",
+								"asset",
+								"deposit",
+								"list"
+							],
+							"query": [
+								{
+									"key": "currency",
+									"value": "USDT-TRX"
+								},
+								{
+									"key": "end_time",
+									"value": "1643532064000",
+									"description": "\"2022-01-29 16:41:04\""
+								},
+								{
+									"key": "start_time",
+									"value": "1642668064000",
+									"description": "\"2022-01-20 16:41:04\""
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetAddressList",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{api_url}}/open/api/v2/asset/address/list?page_size=30",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"open",
+								"api",
+								"v2",
+								"asset",
+								"address",
+								"list"
+							],
+							"query": [
+								{
+									"key": "page_size",
+									"value": "30"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetWithdrawList",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/open/api/v2/asset/withdraw/list?end_time=1648697930000&start_time=1648525130000",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"open",
+								"api",
+								"v2",
+								"asset",
+								"withdraw",
+								"list"
+							],
+							"query": [
+								{
+									"key": "end_time",
+									"value": "1648697930000",
+									"description": "2022-03-31 11:38:50"
+								},
+								{
+									"key": "start_time",
+									"value": "1648525130000",
+									"description": "2022-03-29 11:38:50"
+								},
+								{
+									"key": "withdraw_id",
+									"value": "0a2cd873ec0845fb961a47f9e23f9129",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "withdraw",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"currency\":\"LUNA\",\"chain\":\"BEP20(BSC)\",\"amount\":\"5.730203703902240469\",\"address\":\"0x8D8F1dEBB8F6c92062D4D9Ba3ea44EF4b7104424\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api_url}}/open/api/v2/asset/withdraw",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"open",
+								"api",
+								"v2",
+								"asset",
+								"withdraw"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CancelWithdraw",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{api_url}}/open/api/v2/asset/withdraw?withdraw_id=",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"open",
+								"api",
+								"v2",
+								"asset",
+								"withdraw"
+							],
+							"query": [
+								{
+									"key": "withdraw_id",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "transfer",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"currency\":\"USDT\",\"amount\":\"100\",\"from\":\"MAIN\",\"to\":\"CONTRACT\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api_url}}/open/api/v2/asset/internal/transfer",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"open",
+								"api",
+								"v2",
+								"asset",
+								"internal",
+								"transfer"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetTransferRecord",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{api_url}}/open/api/v2/asset/internal/transfer/record?end_time=1649433600000&start_time=1648742400000",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"open",
+								"api",
+								"v2",
+								"asset",
+								"internal",
+								"transfer",
+								"record"
+							],
+							"query": [
+								{
+									"key": "end_time",
+									"value": "1649433600000"
+								},
+								{
+									"key": "start_time",
+									"value": "1648742400000"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetAvlTransfer",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{api_url}}/open/api/v2/account/balance",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"open",
+								"api",
+								"v2",
+								"account",
+								"balance"
+							],
+							"query": [
+								{
+									"key": "currency",
+									"value": "OMG",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "QueryTransferRecordById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{api_url}}/open/api/v2/asset/internal/transfer/info?transact_id=b4711743428342af8f282faeb7a39a4c",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"open",
+								"api",
+								"v2",
+								"asset",
+								"internal",
+								"transfer",
+								"info"
+							],
+							"query": [
+								{
+									"key": "transact_id",
+									"value": "b4711743428342af8f282faeb7a39a4c"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Websocket",
+			"item": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					"const ApiKey = pm.environment.get(\"api_key\");;",
+					"const ApiSec = pm.environment.get(\"api_secret\");;",
+					"const stemp = new Date().getTime().toString()",
+					"const method = pm.request.method;",
+					"let objectString = ApiKey + stemp",
+					"let params = {}",
+					"if (method === 'POST') {",
+					"    objectString += pm.request.body.raw;",
+					"} else {",
+					"   params = pm.request.url.query;",
+					"   ",
+					"    // objectString += params.map((key) => {",
+					"    //     console.log(`key->`,!!params[key] == true );",
+					"",
+					"    //     return !key.disabled ? `${key}=${encodeURIComponent(params[key])}`:'';",
+					"    // }).join('&');",
+					"",
+					"    // for(var i in params){",
+					"    //      console.log( params[i].key+params[i].value);",
+					"    //      console.log(params[i].value != '');",
+					"",
+					"    // }",
+					"",
+					"    objectString += params;",
+					"}",
+					"",
+					"console.log(`objectString: ${objectString}`);",
+					"",
+					"",
+					"",
+					"const sign = CryptoJS.enc.Hex.stringify(CryptoJS.HmacSHA256(objectString, ApiSec))",
+					"",
+					"console.log(`Request-Time: ${stemp}`)",
+					"console.log(`ApiKey: ${ApiKey}`)",
+					"console.log(`Content-Type: application/json`)",
+					"console.log(objectString)",
+					"console.log(`Signature: ${sign}`)",
+					"pm.request.headers.add({",
+					"    key: 'Request-Time',",
+					"    value: stemp",
+					"});",
+					"",
+					"pm.request.headers.add({",
+					"    key: 'ApiKey',",
+					"    value: ApiKey",
+					"});",
+					"",
+					"pm.request.headers.add({",
+					"    key: 'Content-Type',",
+					"    value: 'application/json'",
+					"});",
+					"",
+					"pm.request.headers.add({",
+					"    key: 'Signature',",
+					"    value: sign",
+					"});",
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}

@@ -1,0 +1,1734 @@
+{
+	"info": {
+		"_postman_id": "41d7fdb5-e229-4510-9ee9-e5162887ebd1",
+		"name": "MEXC V1 contract",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Quote",
+			"item": [
+				{
+					"name": "Ping",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{api_url}}/api/v1/contract/ping",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"contract",
+								"ping"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ContractDetail",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{api_url}}/api/v1/contract/detail",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"contract",
+								"detail"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SupporCurrencies",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://contract.mexc.com/api/v1/contract/support_currencies",
+							"protocol": "https",
+							"host": [
+								"contract",
+								"mexc",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"contract",
+								"support_currencies"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DepthBySymbol",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://contract.mexc.com/api/v1/contract/support_currencies",
+							"protocol": "https",
+							"host": [
+								"contract",
+								"mexc",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"contract",
+								"support_currencies"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DepthcommitsBySymbol",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://contract.mexc.com/api/v1/contract/depth_commits/BTC_USDT/20",
+							"protocol": "https",
+							"host": [
+								"contract",
+								"mexc",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"contract",
+								"depth_commits",
+								"BTC_USDT",
+								"20"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "IndexPriceBySymbol",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://contract.mexc.com/api/v1/contract/depth_commits/BTC_USDT/20",
+							"protocol": "https",
+							"host": [
+								"contract",
+								"mexc",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"contract",
+								"depth_commits",
+								"BTC_USDT",
+								"20"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "FairPriceBySymbol",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://contract.mexc.com/api/v1/contract/depth_commits/BTC_USDT/20",
+							"protocol": "https",
+							"host": [
+								"contract",
+								"mexc",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"contract",
+								"depth_commits",
+								"BTC_USDT",
+								"20"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "FundingRateBySymbol",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://contract.mexc.com/api/v1/contract/depth_commits/BTC_USDT/20",
+							"protocol": "https",
+							"host": [
+								"contract",
+								"mexc",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"contract",
+								"depth_commits",
+								"BTC_USDT",
+								"20"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "KlineBySymbol",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://contract.mexc.com/api/v1/contract/kline/BTC_USDT?interval=Min15&start=1609992674000&end=1652238485681",
+							"protocol": "https",
+							"host": [
+								"contract",
+								"mexc",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"contract",
+								"kline",
+								"BTC_USDT"
+							],
+							"query": [
+								{
+									"key": "interval",
+									"value": "Min15"
+								},
+								{
+									"key": "start",
+									"value": "1609992674000"
+								},
+								{
+									"key": "end",
+									"value": "1652238485681"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "IndexPriceKlineBySymbol",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://contract.mexc.com/api/v1/contract/kline/index_price/BTC_USDT",
+							"protocol": "https",
+							"host": [
+								"contract",
+								"mexc",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"contract",
+								"kline",
+								"index_price",
+								"BTC_USDT"
+							],
+							"query": [
+								{
+									"key": "interval",
+									"value": "Min15",
+									"description": "Min1、Min5、Min15、Min30、Min60、Hour4、Hour8、Day1、Week1、Month1",
+									"disabled": true
+								},
+								{
+									"key": "start",
+									"value": "1609992674000",
+									"disabled": true
+								},
+								{
+									"key": "end",
+									"value": "1609992694000",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "FairPriceKlineBySymbol",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://contract.mexc.com/api/v1/contract/kline/fair_price/BTC_USDT?interval=Min15&start=1609992674000&end=1609992694000",
+							"protocol": "https",
+							"host": [
+								"contract",
+								"mexc",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"contract",
+								"kline",
+								"fair_price",
+								"BTC_USDT"
+							],
+							"query": [
+								{
+									"key": "interval",
+									"value": "Min15"
+								},
+								{
+									"key": "start",
+									"value": "1609992674000"
+								},
+								{
+									"key": "end",
+									"value": "1609992694000"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DealsBySymbol",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://contract.mexc.com/api/v1/contract/deals/BTC_USDT",
+							"protocol": "https",
+							"host": [
+								"contract",
+								"mexc",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"contract",
+								"deals",
+								"BTC_USDT"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Ticker",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://contract.mexc.com/api/v1/contract/ticker",
+							"protocol": "https",
+							"host": [
+								"contract",
+								"mexc",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"contract",
+								"ticker"
+							],
+							"query": [
+								{
+									"key": "symbol",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "RiskReverse",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://contract.mexc.com/api/v1/contract/risk_reverse",
+							"protocol": "https",
+							"host": [
+								"contract",
+								"mexc",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"contract",
+								"risk_reverse"
+							],
+							"query": [
+								{
+									"key": "symbol",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "RiskReverseHistory",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://contract.mexc.com/api/v1/contract/risk_reverse/history?symbol=BTC_USDT&page_num=1&page_size=20",
+							"protocol": "https",
+							"host": [
+								"contract",
+								"mexc",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"contract",
+								"risk_reverse",
+								"history"
+							],
+							"query": [
+								{
+									"key": "symbol",
+									"value": "BTC_USDT"
+								},
+								{
+									"key": "page_num",
+									"value": "1"
+								},
+								{
+									"key": "page_size",
+									"value": "20"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "FundingRateHistory",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{api_url}}/api/v1/contract/funding_rate/history?symbol=BTC_USDT&page_num=1&page_size=20",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"contract",
+								"funding_rate",
+								"history"
+							],
+							"query": [
+								{
+									"key": "symbol",
+									"value": "BTC_USDT"
+								},
+								{
+									"key": "page_num",
+									"value": "1"
+								},
+								{
+									"key": "page_size",
+									"value": "20"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Accounts and Transactions",
+			"item": [
+				{
+					"name": "Assets",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://contract.mexc.com/api/v1/private/account/assets",
+							"protocol": "https",
+							"host": [
+								"contract",
+								"mexc",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"private",
+								"account",
+								"assets"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AssetByCurrency",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{api_url}}/api/v1/private/account/asset/USDT",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"private",
+								"account",
+								"asset",
+								"USDT"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "TransferRecord",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://contract.mexc.com/api/v1/private/account/transfer_record?page_num=1&page_size=20",
+							"protocol": "https",
+							"host": [
+								"contract",
+								"mexc",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"private",
+								"account",
+								"transfer_record"
+							],
+							"query": [
+								{
+									"key": "currency",
+									"value": null,
+									"disabled": true
+								},
+								{
+									"key": "state",
+									"value": null,
+									"disabled": true
+								},
+								{
+									"key": "type",
+									"value": null,
+									"disabled": true
+								},
+								{
+									"key": "page_num",
+									"value": "1"
+								},
+								{
+									"key": "page_size",
+									"value": "20"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "HistoryPositions",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://contract.mexc.com/api/v1/private/position/list/history_positions?page_num=1&page_size=20",
+							"protocol": "https",
+							"host": [
+								"contract",
+								"mexc",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"private",
+								"position",
+								"list",
+								"history_positions"
+							],
+							"query": [
+								{
+									"key": "symbol",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "type",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "page_num",
+									"value": "1"
+								},
+								{
+									"key": "page_size",
+									"value": "20"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "OpenPositions",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://contract.mexc.com/api/v1/private/position/list/history_positions",
+							"protocol": "https",
+							"host": [
+								"contract",
+								"mexc",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"private",
+								"position",
+								"list",
+								"history_positions"
+							],
+							"query": [
+								{
+									"key": "symbol",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "FundingRecords",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://contract.mexc.com/api/v1/private/position/list/history_positions",
+							"protocol": "https",
+							"host": [
+								"contract",
+								"mexc",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"private",
+								"position",
+								"list",
+								"history_positions"
+							],
+							"query": [
+								{
+									"key": "symbol",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "OpenOrders",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://contract.mexc.com/api/v1/private/order/list/open_orders/BTC_USDT?page_num=1&page_size=20",
+							"protocol": "https",
+							"host": [
+								"contract",
+								"mexc",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"private",
+								"order",
+								"list",
+								"open_orders",
+								"BTC_USDT"
+							],
+							"query": [
+								{
+									"key": "page_num",
+									"value": "1"
+								},
+								{
+									"key": "page_size",
+									"value": "20"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "HistoryOrders",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://contract.mexc.com/api/v1/private/order/list/history_orders?page_num=1&page_size=20&symbol=BTC_USDT",
+							"protocol": "https",
+							"host": [
+								"contract",
+								"mexc",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"private",
+								"order",
+								"list",
+								"history_orders"
+							],
+							"query": [
+								{
+									"key": "page_num",
+									"value": "1"
+								},
+								{
+									"key": "page_size",
+									"value": "20"
+								},
+								{
+									"key": "states",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "category",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "start_time",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "end_time",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "side",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "symbol",
+									"value": "BTC_USDT"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ExternalByExternalOid",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://contract.mexc.com/api/v1/private/order/list/history_orders?page_num=1&page_size=20&symbol=BTC_USDT",
+							"protocol": "https",
+							"host": [
+								"contract",
+								"mexc",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"private",
+								"order",
+								"list",
+								"history_orders"
+							],
+							"query": [
+								{
+									"key": "page_num",
+									"value": "1"
+								},
+								{
+									"key": "page_size",
+									"value": "20"
+								},
+								{
+									"key": "states",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "category",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "start_time",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "end_time",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "side",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "symbol",
+									"value": "BTC_USDT"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "QueryOrderById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://contract.mexc.com/api/v1/private/order/get/218699511659380224",
+							"protocol": "https",
+							"host": [
+								"contract",
+								"mexc",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"private",
+								"order",
+								"get",
+								"218699511659380224"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "BatchQueryById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://contract.mexc.com/api/v1/private/order/batch_query?order_ids=1423534534",
+							"protocol": "https",
+							"host": [
+								"contract",
+								"mexc",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"private",
+								"order",
+								"batch_query"
+							],
+							"query": [
+								{
+									"key": "order_ids",
+									"value": "1423534534",
+									"description": "order number array，can be separated by \",\" for example :order_ids = 1,2,3(maximum 50 orders):"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DealDetails",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://contract.mexc.com/api/v1/private/order/deal_details/2543756756876",
+							"protocol": "https",
+							"host": [
+								"contract",
+								"mexc",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"private",
+								"order",
+								"deal_details",
+								"2543756756876"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "OrderDeals",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{api_url}}/api/v1/private/order/list/order_deals?symbol=LUNA_USDT&page_num=1&page_size=20",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"private",
+								"order",
+								"list",
+								"order_deals"
+							],
+							"query": [
+								{
+									"key": "symbol",
+									"value": "LUNA_USDT"
+								},
+								{
+									"key": "page_num",
+									"value": "1"
+								},
+								{
+									"key": "page_size",
+									"value": "20"
+								},
+								{
+									"key": "start_time",
+									"value": "1",
+									"disabled": true
+								},
+								{
+									"key": "end_time",
+									"value": "100000",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Planorder",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://contract.mexc.com/api/v1/private/planorder/list/orders?page_num=1&page_size=20",
+							"protocol": "https",
+							"host": [
+								"contract",
+								"mexc",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"private",
+								"planorder",
+								"list",
+								"orders"
+							],
+							"query": [
+								{
+									"key": "symbol",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "states",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "start_time",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "end_time",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "page_num",
+									"value": "1"
+								},
+								{
+									"key": "page_size",
+									"value": "20"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Stoporder",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://contract.mexc.com/api/v1/private/stoporder/list/orders?page_num=1&page_size=20",
+							"protocol": "https",
+							"host": [
+								"contract",
+								"mexc",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"private",
+								"stoporder",
+								"list",
+								"orders"
+							],
+							"query": [
+								{
+									"key": "symbol",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "states",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "start_time",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "end_time",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "page_num",
+									"value": "1"
+								},
+								{
+									"key": "page_size",
+									"value": "20"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "RiskLimit",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{api_url}}/api/v1/private/account/risk_limit",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"private",
+								"account",
+								"risk_limit"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "TieredFeeRate",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://contract.mexc.com/api/v1/private/account/tiered_fee_rate?symbol=BTC_USDT",
+							"protocol": "https",
+							"host": [
+								"contract",
+								"mexc",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"private",
+								"account",
+								"tiered_fee_rate"
+							],
+							"query": [
+								{
+									"key": "symbol",
+									"value": "BTC_USDT"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ChangeMargin",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \"positionId\": 279313529050999808, \"amount\": 1, \"type\": \"ADD\"}"
+						},
+						"url": {
+							"raw": "{{api_url}}/api/v1/private/position/change_margin?positionId=279313529050999808&amount=1&type=ADD",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"private",
+								"position",
+								"change_margin"
+							],
+							"query": [
+								{
+									"key": "positionId",
+									"value": "279313529050999808"
+								},
+								{
+									"key": "amount",
+									"value": "1"
+								},
+								{
+									"key": "type",
+									"value": "ADD",
+									"description": "type ,ADD: increase,SUB: decrease"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Leverage",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://contract.mexc.com/api/v1/private/position/leverage?symbol=LUNA_USDT",
+							"protocol": "https",
+							"host": [
+								"contract",
+								"mexc",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"private",
+								"position",
+								"leverage"
+							],
+							"query": [
+								{
+									"key": "symbol",
+									"value": "LUNA_USDT"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ChangeLeverage",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"openType\": 1,\"leverage\": 20,\"symbol\": \"BTC_USDT\",\"positionType\": 1}"
+						},
+						"url": {
+							"raw": "{{api_url}}/api/v1/private/position/change_leverage",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"private",
+								"position",
+								"change_leverage"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PositionMode",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{api_url}}/api/v1/private/position/leverage?symbol=LUNA_USDT",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"private",
+								"position",
+								"leverage"
+							],
+							"query": [
+								{
+									"key": "symbol",
+									"value": "LUNA_USDT"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ChangePositionMode",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \"positionMode\": 1 }"
+						},
+						"url": {
+							"raw": "{{api_url}}/api/v1/private/position/change_position_mode",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"private",
+								"position",
+								"change_position_mode"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PlaceNewOrder",
+					"protocolProfileBehavior": {
+						"tlsDisabledProtocols": []
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"symbol\": \"DOGE_USDT\",\"price\": \"0.16\",\"vol\": 1,\"leverage\": 20,\"side\": 3,\"type\": 5,\"openType\": 1, \"positionMode\": 2}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api_url}}/api/v1/private/order/submit",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"private",
+								"order",
+								"submit"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PlaceNewOrderBatch",
+					"protocolProfileBehavior": {
+						"tlsDisabledProtocols": []
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\n  {\n    \"symbol\": \"BTC_USD\",\n    \"price\": 8800,\n    \"vol\": 100,\n    \"leverage\": 20,\n    \"side\": 1,\n    \"type\": 1,\n    \"openType\": 1,\n    \"externalOid\": \"order1\"\n  },\n  {\n    \"symbol\": \"BTC_USD\",\n    \"price\": 500,\n    \"vol\": 100,\n    \"leverage\": 50,\n    \"side\": 3,\n    \"type\": 1,\n    \"openType\": 1,\n    \"externalOid\": \"order2\"\n  }\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api_url}}/api/v1/private/order/submit",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"private",
+								"order",
+								"submit"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CancelOrderById",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[ 218699511659380224 ]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api_url}}/api/v1/private/order/cancel",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"private",
+								"order",
+								"cancel"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CancelWithExternal",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"symbol\": \"DOGE_USDT\",\"externalOid\": \"218699511659380224\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api_url}}/api/v1/private/order/cancel_with_external",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"private",
+								"order",
+								"cancel_with_external"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CancelAll",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"symbol\": \"DOGE_USDT\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api_url}}/api/v1/private/order/cancel_all",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"private",
+								"order",
+								"cancel_all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PlacePlanOrder",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"symbol\":\"DOGE_USDT\",\"price\":\"0.06\",\"vol\":1,\"leverage\":20,\"side\":1,\"openType\":1,\"triggerPrice\":0.06,\"triggerType\":2,\"executeCycle\":1,\"orderType\":5,\"trend\":1}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api_url}}/api/v1/private/planorder/place",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"private",
+								"planorder",
+								"place"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CancelPlanOrder",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[281077101510558208]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api_url}}/api/v1/private/planorder/cancel",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"private",
+								"planorder",
+								"cancel"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CancelAllPlanOrder",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"symbol\": \"BTC_USDT\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api_url}}/api/v1/private/planorder/cancel_all",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"private",
+								"planorder",
+								"cancel_all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CancelStopOrder",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[{\"stopPlanOrderId\": \"281077101510558208\"}]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api_url}}/api/v1/private/stoporder/cancel",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"private",
+								"stoporder",
+								"cancel"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CancelAllStopOrder",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api_url}}/api/v1/private/stoporder/cancel_all",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"private",
+								"stoporder",
+								"cancel_all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "StoporderChangePrice",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"orderId\":\"279995533824136192\",\"stopLossPrice\":\"0.04\",\"takeProfitPrice\":\"0.1\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api_url}}/api/v1/private/stoporder/change_price",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"private",
+								"stoporder",
+								"change_price"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "StopOrderChangePlanPrice",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"stopPlanOrderId\":\"279995533824136192\",\"stopLossPrice\":\"0.02\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api_url}}/api/v1/private/stoporder/change_plan_price",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"private",
+								"stoporder",
+								"change_plan_price"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					"const ApiKey = pm.environment.get(\"api_key\");;",
+					"const ApiSec = pm.environment.get(\"api_secret\");;",
+					"const stemp = new Date().getTime().toString()",
+					"const method = pm.request.method;",
+					"let objectString = ApiKey + stemp",
+					"let params = {}",
+					"if (method === 'POST') {",
+					"    objectString += pm.request.body.raw;",
+					"} else {",
+					"   params = pm.request.url.query;",
+					"   ",
+					"    // objectString += params.map((key) => {",
+					"    //     console.log(`key->`,!!params[key] == true );",
+					"",
+					"    //     return !key.disabled ? `${key}=${encodeURIComponent(params[key])}`:'';",
+					"    // }).join('&');",
+					"",
+					"    // for(var i in params){",
+					"    //      console.log( params[i].key+params[i].value);",
+					"    //      console.log(params[i].value != '');",
+					"",
+					"    // }",
+					"",
+					"    objectString += params;",
+					"}",
+					"",
+					"console.log(`objectString: ${objectString}`);",
+					"",
+					"",
+					"",
+					"const sign = CryptoJS.enc.Hex.stringify(CryptoJS.HmacSHA256(objectString, ApiSec))",
+					"",
+					"console.log(`Request-Time: ${stemp}`)",
+					"console.log(`ApiKey: ${ApiKey}`)",
+					"console.log(`Content-Type: application/json`)",
+					"console.log(objectString)",
+					"console.log(`Signature: ${sign}`)",
+					"pm.request.headers.add({",
+					"    key: 'Request-Time',",
+					"    value: stemp",
+					"});",
+					"",
+					"pm.request.headers.add({",
+					"    key: 'ApiKey',",
+					"    value: ApiKey",
+					"});",
+					"",
+					"pm.request.headers.add({",
+					"    key: 'Content-Type',",
+					"    value: 'application/json'",
+					"});",
+					"",
+					"pm.request.headers.add({",
+					"    key: 'Signature',",
+					"    value: sign",
+					"});",
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
