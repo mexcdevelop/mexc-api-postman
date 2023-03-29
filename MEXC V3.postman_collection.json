@@ -3120,6 +3120,7 @@
 					"let paramsObject = {};",
 					"",
 					"const api_secret = pm.environment.get(\"api_secret\");",
+					"const api_key = pm.environment.get(\"api_key\");",
 					"console.log('api_secret',api_secret);",
 					"console.log('x-mexc-apikey',api_key);",
 					"",
