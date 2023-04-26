@@ -1,0 +1,3184 @@
+{
+	"info": {
+		"_postman_id": "7d8b56bc-7c7a-4f87-aab7-f96075785505",
+		"name": "MEXC V3",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20747910"
+	},
+	"item": [
+		{
+			"name": "Market Date Endpoints",
+			"item": [
+				{
+					"name": "Test Connectivity",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{api_url}}/api/v3/ping",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"api",
+								"v3",
+								"ping"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Check Server Time",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{api_url}}/api/v3/time",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"api",
+								"v3",
+								"time"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Exchange Information",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{api_url}}/api/v3/exchangeInfo",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"api",
+								"v3",
+								"exchangeInfo"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Order Book",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{api_url}}/api/v3/depth?symbol=BTCUSDT",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"api",
+								"v3",
+								"depth"
+							],
+							"query": [
+								{
+									"key": "symbol",
+									"value": "BTCUSDT",
+									"description": "Symbol"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Recent Trades List",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{api_url}}/api/v3/trades?symbol=BTCUSDT",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"api",
+								"v3",
+								"trades"
+							],
+							"query": [
+								{
+									"key": "symbol",
+									"value": "BTCUSDT",
+									"description": "Symbol"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Old Trade Lookup",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{api_url}}/api/v3/historicalTrades?symbol=BTCUSDT",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"api",
+								"v3",
+								"historicalTrades"
+							],
+							"query": [
+								{
+									"key": "symbol",
+									"value": "BTCUSDT",
+									"description": "Symbol"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Compressed/Aggregate Trades List",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{api_url}}/api/v3/aggTrades?symbol=BTCUSDT",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"api",
+								"v3",
+								"aggTrades"
+							],
+							"query": [
+								{
+									"key": "symbol",
+									"value": "BTCUSDT"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Kline/Candlestick Data",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{api_url}}/api/v3/klines?symbol=BTCUSDT&interval=1m",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"api",
+								"v3",
+								"klines"
+							],
+							"query": [
+								{
+									"key": "symbol",
+									"value": "BTCUSDT",
+									"description": "Symbol"
+								},
+								{
+									"key": "interval",
+									"value": "1m",
+									"description": "ENUM: Kline interval"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Current Average Price",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{api_url}}/api/v3/avgPrice?symbol=BTCUSDT",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"api",
+								"v3",
+								"avgPrice"
+							],
+							"query": [
+								{
+									"key": "symbol",
+									"value": "BTCUSDT",
+									"description": "Symbol"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "24hr Ticker Price Change Statistics",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{api_url}}/api/v3/ticker/24hr",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"api",
+								"v3",
+								"ticker",
+								"24hr"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Symbol Price Ticker",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{api_url}}/api/v3/ticker/price",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"api",
+								"v3",
+								"ticker",
+								"price"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Symbol Order Book Ticker",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{api_url}}/api/v3/ticker/bookTicker",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"api",
+								"v3",
+								"ticker",
+								"bookTicker"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Default Symbols",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{api_url}}/api/v3/defaultSymbols",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"api",
+								"v3",
+								"defaultSymbols"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Spot Account/Trade",
+			"item": [
+				{
+					"name": "Test New Order",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-mexc-apikey",
+								"value": "{{api_key}}",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{api_url}}/api/v3/order/test?symbol=BTCUSDT&side=BUY&type=LIMIT&quantity=0.0002&price=30000&timestamp={{timestamp}}&signature={{signature}}",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"api",
+								"v3",
+								"order",
+								"test"
+							],
+							"query": [
+								{
+									"key": "symbol",
+									"value": "BTCUSDT",
+									"description": "Symbol"
+								},
+								{
+									"key": "side",
+									"value": "BUY",
+									"description": "ENUM：Order Side"
+								},
+								{
+									"key": "type",
+									"value": "LIMIT",
+									"description": "ENUM：Order Type"
+								},
+								{
+									"key": "quantity",
+									"value": "0.0002",
+									"description": "Quantity"
+								},
+								{
+									"key": "price",
+									"value": "30000",
+									"description": "Price"
+								},
+								{
+									"key": "timestamp",
+									"value": "{{timestamp}}"
+								},
+								{
+									"key": "signature",
+									"value": "{{signature}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New Order",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-mexc-apikey",
+								"value": "{{api_key}}",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "{{api_url}}/api/v3/order?symbol=MXUSDT&side=BUY&type=LIMIT&quantity=50&price=0.1&timestamp={{timestamp}}&signature={{signature}}",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"api",
+								"v3",
+								"order"
+							],
+							"query": [
+								{
+									"key": "symbol",
+									"value": "MXUSDT",
+									"description": "Symbol"
+								},
+								{
+									"key": "side",
+									"value": "BUY",
+									"description": "ENUM：Order Side"
+								},
+								{
+									"key": "type",
+									"value": "LIMIT",
+									"description": "ENUM：Order Type "
+								},
+								{
+									"key": "quantity",
+									"value": "50",
+									"description": "Quantity"
+								},
+								{
+									"key": "quoteOrderQty",
+									"value": "100",
+									"description": "Quote order quantity (For type: MARKET)",
+									"disabled": true
+								},
+								{
+									"key": "price",
+									"value": "0.1",
+									"description": "Price"
+								},
+								{
+									"key": "timestamp",
+									"value": "{{timestamp}}"
+								},
+								{
+									"key": "signature",
+									"value": "{{signature}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Cancel Orde",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "x-mexc-apikey",
+								"value": "{{api_key}}",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{api_url}}/api/v3/order?symbol=BTCUSDT&orderId=135598325645746176&timestamp={{timestamp}}&signature={{signature}}",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"api",
+								"v3",
+								"order"
+							],
+							"query": [
+								{
+									"key": "symbol",
+									"value": "BTCUSDT",
+									"description": "Symbol"
+								},
+								{
+									"key": "orderId",
+									"value": "135598325645746176",
+									"description": "Order id"
+								},
+								{
+									"key": "timestamp",
+									"value": "{{timestamp}}"
+								},
+								{
+									"key": "signature",
+									"value": "{{signature}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Cancel all Open Orders on a Symbol",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "x-mexc-apikey",
+								"value": "{{api_key}}",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{api_url}}/api/v3/openOrders?symbol=BTCUSDT&timestamp={{timestamp}}&signature={{signature}}",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"api",
+								"v3",
+								"openOrders"
+							],
+							"query": [
+								{
+									"key": "symbol",
+									"value": "BTCUSDT",
+									"description": "Symbol"
+								},
+								{
+									"key": "timestamp",
+									"value": "{{timestamp}}"
+								},
+								{
+									"key": "signature",
+									"value": "{{signature}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Query Order",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-mexc-apikey",
+								"value": "{{api_key}}",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{api_url}}/api/v3/order?symbol=BTCUSDT&orderId=129402018493145088&timestamp={{timestamp}}&signature={{signature}}",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"api",
+								"v3",
+								"order"
+							],
+							"query": [
+								{
+									"key": "symbol",
+									"value": "BTCUSDT",
+									"description": "Symbol"
+								},
+								{
+									"key": "orderId",
+									"value": "129402018493145088",
+									"description": "Order id"
+								},
+								{
+									"key": "timestamp",
+									"value": "{{timestamp}}"
+								},
+								{
+									"key": "signature",
+									"value": "{{signature}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Current Open Orders",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-mexc-apikey",
+								"value": "{{api_key}}",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{api_url}}/api/v3/openOrders?symbol=BTCUSDT&timestamp={{timestamp}}&signature={{signature}}",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"api",
+								"v3",
+								"openOrders"
+							],
+							"query": [
+								{
+									"key": "symbol",
+									"value": "BTCUSDT",
+									"description": "Symbol"
+								},
+								{
+									"key": "timestamp",
+									"value": "{{timestamp}}"
+								},
+								{
+									"key": "signature",
+									"value": "{{signature}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "All Orders",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-mexc-apikey",
+								"value": "{{api_key}}",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{api_url}}/api/v3/allOrders?symbol=BTCUSDT&timestamp={{timestamp}}&signature={{signature}}",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"api",
+								"v3",
+								"allOrders"
+							],
+							"query": [
+								{
+									"key": "symbol",
+									"value": "BTCUSDT",
+									"description": "Symbol"
+								},
+								{
+									"key": "timestamp",
+									"value": "{{timestamp}}"
+								},
+								{
+									"key": "signature",
+									"value": "{{signature}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Account Information",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-mexc-apikey",
+								"value": "{{api_key}}",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{api_url}}/api/v3/account?timestamp={{timestamp}}&signature={{signature}}",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"api",
+								"v3",
+								"account"
+							],
+							"query": [
+								{
+									"key": "timestamp",
+									"value": "{{timestamp}}"
+								},
+								{
+									"key": "signature",
+									"value": "{{signature}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Account Trade List",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-mexc-apikey",
+								"value": "{{api_key}}",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{api_url}}/api/v3/myTrades?symbol=MXUSDT&timestamp={{timestamp}}&signature={{signature}}&recvWindow=60000",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"api",
+								"v3",
+								"myTrades"
+							],
+							"query": [
+								{
+									"key": "symbol",
+									"value": "MXUSDT",
+									"description": "Symbol"
+								},
+								{
+									"key": "timestamp",
+									"value": "{{timestamp}}"
+								},
+								{
+									"key": "signature",
+									"value": "{{signature}}"
+								},
+								{
+									"key": "recvWindow",
+									"value": "60000"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Query Self Symbols",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-mexc-apikey",
+								"value": "{{api_key}}",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{api_url}}/api/v3/selfSymbols?timestamp={{timestamp}}&signature={{signature}}",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"api",
+								"v3",
+								"selfSymbols"
+							],
+							"query": [
+								{
+									"key": "timestamp",
+									"value": "{{timestamp}}"
+								},
+								{
+									"key": "signature",
+									"value": "{{signature}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "MxDeduct enable",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-mexc-apikey",
+								"value": "{{api_key}}",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "{{api_url}}/api/v3/mxDeduct/enable?mxDeductEnable=TRUE&timestamp={{timestamp}}&signature={{signature}}",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"api",
+								"v3",
+								"mxDeduct",
+								"enable"
+							],
+							"query": [
+								{
+									"key": "mxDeductEnable",
+									"value": "TRUE"
+								},
+								{
+									"key": "timestamp",
+									"value": "{{timestamp}}"
+								},
+								{
+									"key": "signature",
+									"value": "{{signature}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Query MxDeduct",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-mexc-apikey",
+								"value": "{{api_key}}",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{api_url}}/api/v3/mxDeduct/enable?timestamp={{timestamp}}&signature={{signature}}",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"api",
+								"v3",
+								"mxDeduct",
+								"enable"
+							],
+							"query": [
+								{
+									"key": "timestamp",
+									"value": "{{timestamp}}"
+								},
+								{
+									"key": "signature",
+									"value": "{{signature}}"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "EFT",
+			"item": [
+				{
+					"name": "ETF info",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{api_url}}/api/v3/etf/info",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"api",
+								"v3",
+								"etf",
+								"info"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Wallet",
+			"item": [
+				{
+					"name": "Withdraw Apply",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-mexc-apikey",
+								"value": "{{api_key}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{api_url}}/api/v3/capital/withdraw/apply?coin=GPT&network=ERC20&address=0x822330d165d511a855d474010a629a08b6fe1e8c&amount=200&signature={{signature}}&timestamp={{timestamp}}",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"api",
+								"v3",
+								"capital",
+								"withdraw",
+								"apply"
+							],
+							"query": [
+								{
+									"key": "recvWindow",
+									"value": "60000",
+									"disabled": true
+								},
+								{
+									"key": "coin",
+									"value": "GPT"
+								},
+								{
+									"key": "withdrawOrderId",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "network",
+									"value": "ERC20"
+								},
+								{
+									"key": "address",
+									"value": "0x822330d165d511a855d474010a629a08b6fe1e8c"
+								},
+								{
+									"key": "amount",
+									"value": "200"
+								},
+								{
+									"key": "remark",
+									"value": "xx,111",
+									"disabled": true
+								},
+								{
+									"key": "signature",
+									"value": "{{signature}}"
+								},
+								{
+									"key": "timestamp",
+									"value": "{{timestamp}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Query Deposit Hisrec",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-mexc-apikey",
+								"value": "{{api_key}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{api_url}}/api/v3/capital/deposit/hisrec?coin=USDT&signature={{signature}}&timestamp={{timestamp}}",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"api",
+								"v3",
+								"capital",
+								"deposit",
+								"hisrec"
+							],
+							"query": [
+								{
+									"key": "coin",
+									"value": "USDT"
+								},
+								{
+									"key": "signature",
+									"value": "{{signature}}"
+								},
+								{
+									"key": "timestamp",
+									"value": "{{timestamp}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Query All Coins",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-mexc-apikey",
+								"value": "{{api_key}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{api_url}}/api/v3/capital/config/getall?signature={{signature}}&timestamp={{timestamp}}",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"api",
+								"v3",
+								"capital",
+								"config",
+								"getall"
+							],
+							"query": [
+								{
+									"key": "signature",
+									"value": "{{signature}}"
+								},
+								{
+									"key": "timestamp",
+									"value": "{{timestamp}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Listen Key",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-mexc-apikey",
+								"value": "{{api_key}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"subAccount\":\"subAccount1123\",\n    \"note\":\"note1111\",\n    \"permissions\":\"SPOT_ACCOUNT\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api_url}}/api/v3/broker/sub-account/apiKey?signature={{signature}}&timestamp={{timestamp}}",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"api",
+								"v3",
+								"broker",
+								"sub-account",
+								"apiKey"
+							],
+							"query": [
+								{
+									"key": "signature",
+									"value": "{{signature}}"
+								},
+								{
+									"key": "timestamp",
+									"value": "{{timestamp}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Transfer",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-mexc-apikey",
+								"value": "{{api_key}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{api_url}}/api/v3/capital/transfer?fromAccountType=SPOT&toAccountType=FUTURE&amount=5&asset=USDT&signature={{signature}}&timestamp={{timestamp}}",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"api",
+								"v3",
+								"capital",
+								"transfer"
+							],
+							"query": [
+								{
+									"key": "fromAccountType",
+									"value": "SPOT"
+								},
+								{
+									"key": "toAccountType",
+									"value": "FUTURE"
+								},
+								{
+									"key": "amount",
+									"value": "5"
+								},
+								{
+									"key": "symbol",
+									"value": "MXUSDT",
+									"disabled": true
+								},
+								{
+									"key": "asset",
+									"value": "USDT"
+								},
+								{
+									"key": "signature",
+									"value": "{{signature}}"
+								},
+								{
+									"key": "timestamp",
+									"value": "{{timestamp}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Transfer Record",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-mexc-apikey",
+								"value": "{{api_key}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{api_url}}/api/v3/capital/transfer?fromAccountType=SPOT&toAccountType=SPOT&signature={{signature}}&timestamp={{timestamp}}",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"api",
+								"v3",
+								"capital",
+								"transfer"
+							],
+							"query": [
+								{
+									"key": "fromAccountType",
+									"value": "SPOT"
+								},
+								{
+									"key": "toAccountType",
+									"value": "SPOT"
+								},
+								{
+									"key": "symbol",
+									"value": "USDT",
+									"disabled": true
+								},
+								{
+									"key": "signature",
+									"value": "{{signature}}"
+								},
+								{
+									"key": "timestamp",
+									"value": "{{timestamp}}"
+								},
+								{
+									"key": "startTime",
+									"value": "1657423701000",
+									"disabled": true
+								},
+								{
+									"key": "endTime",
+									"value": "1660102101000\n",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Withdraw History",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-mexc-apikey",
+								"value": "{{api_key}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{api_url}}/api/v3/capital/withdraw/history?coin=USDT&signature={{signature}}&timestamp={{timestamp}}",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"api",
+								"v3",
+								"capital",
+								"withdraw",
+								"history"
+							],
+							"query": [
+								{
+									"key": "coin",
+									"value": "USDT"
+								},
+								{
+									"key": "signature",
+									"value": "{{signature}}"
+								},
+								{
+									"key": "timestamp",
+									"value": "{{timestamp}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Query Transfer By TranId",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-mexc-apikey",
+								"value": "{{api_key}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{api_url}}/api/v3/capital/transfer/tranId?tranId=cb28c88cd20c42819e4d5148d5fb5742&signature={{signature}}&timestamp={{timestamp}}",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"api",
+								"v3",
+								"capital",
+								"transfer",
+								"tranId"
+							],
+							"query": [
+								{
+									"key": "tranId",
+									"value": "cb28c88cd20c42819e4d5148d5fb5742"
+								},
+								{
+									"key": "signature",
+									"value": "{{signature}}"
+								},
+								{
+									"key": "timestamp",
+									"value": "{{timestamp}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Generate Deposit Address",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-mexc-apikey",
+								"value": "{{api_key}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{api_url}}/api/v3/capital/deposit/address?coin=MX&network=ERC20&signature={{signature}}&timestamp={{timestamp}}",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"api",
+								"v3",
+								"capital",
+								"deposit",
+								"address"
+							],
+							"query": [
+								{
+									"key": "coin",
+									"value": "MX"
+								},
+								{
+									"key": "network",
+									"value": "ERC20"
+								},
+								{
+									"key": "remark",
+									"value": "xx,111",
+									"disabled": true
+								},
+								{
+									"key": "signature",
+									"value": "{{signature}}"
+								},
+								{
+									"key": "timestamp",
+									"value": "{{timestamp}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Query Deposit Address",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-mexc-apikey",
+								"value": "{{api_key}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{api_url}}/api/v3/capital/deposit/address?coin=MX&amount=200&signature={{signature}}&timestamp={{timestamp}}",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"api",
+								"v3",
+								"capital",
+								"deposit",
+								"address"
+							],
+							"query": [
+								{
+									"key": "coin",
+									"value": "MX"
+								},
+								{
+									"key": "amount",
+									"value": "200"
+								},
+								{
+									"key": "remark",
+									"value": "xx,111",
+									"disabled": true
+								},
+								{
+									"key": "signature",
+									"value": "{{signature}}"
+								},
+								{
+									"key": "timestamp",
+									"value": "{{timestamp}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Assets That Can Be Converted Into MX",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-mexc-apikey",
+								"value": "{{api_key}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{api_url}}/api/v3/capital/convert/list?signature={{signature}}&timestamp={{timestamp}}",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"api",
+								"v3",
+								"capital",
+								"convert",
+								"list"
+							],
+							"query": [
+								{
+									"key": "signature",
+									"value": "{{signature}}"
+								},
+								{
+									"key": "timestamp",
+									"value": "{{timestamp}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Dust Transfer",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-mexc-apikey",
+								"value": "{{api_key}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{api_url}}/api/v3/capital/convert?asset=ARB&timestamp={{timestamp}}&signature={{signature}}",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"api",
+								"v3",
+								"capital",
+								"convert"
+							],
+							"query": [
+								{
+									"key": "asset",
+									"value": "ARB"
+								},
+								{
+									"key": "timestamp",
+									"value": "{{timestamp}}"
+								},
+								{
+									"key": "signature",
+									"value": "{{signature}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DustLog",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-mexc-apikey",
+								"value": "{{api_key}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{api_url}}/api/v3/capital/convert?signature={{signature}}&timestamp={{timestamp}}",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"api",
+								"v3",
+								"capital",
+								"convert"
+							],
+							"query": [
+								{
+									"key": "signature",
+									"value": "{{signature}}"
+								},
+								{
+									"key": "timestamp",
+									"value": "{{timestamp}}"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Margin",
+			"item": [
+				{
+					"name": "Change Trade Mode",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-mexc-apikey",
+								"value": "{{api_key}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{api_url}}/api/v3/margin/tradeMode?symbol=BTCUSDT&tradeMode=0&recvWindow=60000&timestamp={{timestamp}}&signature={{signature}}",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"api",
+								"v3",
+								"margin",
+								"tradeMode"
+							],
+							"query": [
+								{
+									"key": "symbol",
+									"value": "BTCUSDT"
+								},
+								{
+									"key": "tradeMode",
+									"value": "0"
+								},
+								{
+									"key": "recvWindow",
+									"value": "60000"
+								},
+								{
+									"key": "timestamp",
+									"value": "{{timestamp}}"
+								},
+								{
+									"key": "signature",
+									"value": "{{signature}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Margin Account New Order",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-mexc-apikey",
+								"value": "{{api_key}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{api_url}}/api/v3/margin/order?symbol=MXUSDT&side=BUY&type=FILL_OR_KILL&quantity=50&price=0.12483583475634&recvWindow=60000&timestamp={{timestamp}}&signature={{signature}}",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"api",
+								"v3",
+								"margin",
+								"order"
+							],
+							"query": [
+								{
+									"key": "symbol",
+									"value": "MXUSDT"
+								},
+								{
+									"key": "side",
+									"value": "BUY"
+								},
+								{
+									"key": "type",
+									"value": "FILL_OR_KILL"
+								},
+								{
+									"key": "quantity",
+									"value": "50"
+								},
+								{
+									"key": "price",
+									"value": "0.12483583475634"
+								},
+								{
+									"key": "recvWindow",
+									"value": "60000"
+								},
+								{
+									"key": "timestamp",
+									"value": "{{timestamp}}"
+								},
+								{
+									"key": "signature",
+									"value": "{{signature}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Margin Account Borrow",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-mexc-apikey",
+								"value": "{{api_key}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{api_url}}/api/v3/margin/loan?asset=MX&isIsolated=TRUE&symbol=MXUSDT&amount=100.835834534856348&timestamp={{timestamp}}&signature={{signature}}",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"api",
+								"v3",
+								"margin",
+								"loan"
+							],
+							"query": [
+								{
+									"key": "asset",
+									"value": "MX"
+								},
+								{
+									"key": "isIsolated",
+									"value": "TRUE"
+								},
+								{
+									"key": "symbol",
+									"value": "MXUSDT"
+								},
+								{
+									"key": "amount",
+									"value": "100.835834534856348"
+								},
+								{
+									"key": "timestamp",
+									"value": "{{timestamp}}"
+								},
+								{
+									"key": "signature",
+									"value": "{{signature}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Margin Account Repay",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-mexc-apikey",
+								"value": "{{api_key}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{api_url}}/api/v3/margin/repay?asset=MX&symbol=MXUSDT&amount=10&borrowId=706703220612927488&recvWindow=60000&timestamp={{timestamp}}&signature={{signature}}",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"api",
+								"v3",
+								"margin",
+								"repay"
+							],
+							"query": [
+								{
+									"key": "asset",
+									"value": "MX"
+								},
+								{
+									"key": "symbol",
+									"value": "MXUSDT"
+								},
+								{
+									"key": "amount",
+									"value": "10"
+								},
+								{
+									"key": "borrowId",
+									"value": "706703220612927488"
+								},
+								{
+									"key": "recvWindow",
+									"value": "60000"
+								},
+								{
+									"key": "timestamp",
+									"value": "{{timestamp}}"
+								},
+								{
+									"key": "signature",
+									"value": "{{signature}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Margin Account Cancel all Open Orders on a Symbol",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "x-mexc-apikey",
+								"value": "{{api_key}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{api_url}}/api/v3/margin/openOrders?symbol=MXUSDT&timestamp={{timestamp}}&signature={{signature}}",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"api",
+								"v3",
+								"margin",
+								"openOrders"
+							],
+							"query": [
+								{
+									"key": "symbol",
+									"value": "MXUSDT"
+								},
+								{
+									"key": "timestamp",
+									"value": "{{timestamp}}"
+								},
+								{
+									"key": "signature",
+									"value": "{{signature}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Margin Account Cancel Order",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "x-mexc-apikey",
+								"value": "{{api_key}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{api_url}}/api/v3/margin/order?symbol=MXUSDT&orderId=706702415281393664&recvWindow=60000&timestamp={{timestamp}}&signature={{signature}}",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"api",
+								"v3",
+								"margin",
+								"order"
+							],
+							"query": [
+								{
+									"key": "symbol",
+									"value": "MXUSDT"
+								},
+								{
+									"key": "orderId",
+									"value": "706702415281393664"
+								},
+								{
+									"key": "recvWindow",
+									"value": "60000"
+								},
+								{
+									"key": "timestamp",
+									"value": "{{timestamp}}"
+								},
+								{
+									"key": "signature",
+									"value": "{{signature}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Query Loan Record",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-mexc-apikey",
+								"value": "{{api_key}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{api_url}}/api/v3/margin/loan?asset=BTC&symbol=BTCUSDT&timestamp={{timestamp}}&signature={{signature}}",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"api",
+								"v3",
+								"margin",
+								"loan"
+							],
+							"query": [
+								{
+									"key": "asset",
+									"value": "BTC"
+								},
+								{
+									"key": "symbol",
+									"value": "BTCUSDT"
+								},
+								{
+									"key": "recvWindow",
+									"value": "60000",
+									"disabled": true
+								},
+								{
+									"key": "timestamp",
+									"value": "{{timestamp}}"
+								},
+								{
+									"key": "signature",
+									"value": "{{signature}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Query Margin Account's All Order",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-mexc-apikey",
+								"value": "{{api_key}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{api_url}}/api/v3/margin/allOrders?symbol=MXUSDT&recvWindow=60000&timestamp={{timestamp}}&signature={{signature}}",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"api",
+								"v3",
+								"margin",
+								"allOrders"
+							],
+							"query": [
+								{
+									"key": "symbol",
+									"value": "MXUSDT"
+								},
+								{
+									"key": "recvWindow",
+									"value": "60000"
+								},
+								{
+									"key": "timestamp",
+									"value": "{{timestamp}}"
+								},
+								{
+									"key": "signature",
+									"value": "{{signature}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Query Margin Account's Trade List",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-mexc-apikey",
+								"value": "{{api_key}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{api_url}}/api/v3/margin/myTrades?symbol=BTCUSDT&recvWindow=60000&timestamp={{timestamp}}&signature={{signature}}",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"api",
+								"v3",
+								"margin",
+								"myTrades"
+							],
+							"query": [
+								{
+									"key": "symbol",
+									"value": "BTCUSDT"
+								},
+								{
+									"key": "recvWindow",
+									"value": "60000"
+								},
+								{
+									"key": "timestamp",
+									"value": "{{timestamp}}"
+								},
+								{
+									"key": "signature",
+									"value": "{{signature}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Query Margin Account's Open Order",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-mexc-apikey",
+								"value": "{{api_key}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{api_url}}/api/v3/margin/openOrders?symbol=BTCUSDT&recvWindow=60000&timestamp={{timestamp}}&signature={{signature}}",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"api",
+								"v3",
+								"margin",
+								"openOrders"
+							],
+							"query": [
+								{
+									"key": "symbol",
+									"value": "BTCUSDT"
+								},
+								{
+									"key": "recvWindow",
+									"value": "60000"
+								},
+								{
+									"key": "timestamp",
+									"value": "{{timestamp}}"
+								},
+								{
+									"key": "signature",
+									"value": "{{signature}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Query Margin Account's maxTransferable",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-mexc-apikey",
+								"value": "{{api_key}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{api_url}}/api/v3/margin/maxTransferable?symbol=MX_USDT&asset=MX&timestamp={{timestamp}}&signature={{signature}}",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"api",
+								"v3",
+								"margin",
+								"maxTransferable"
+							],
+							"query": [
+								{
+									"key": "symbol",
+									"value": "MX_USDT"
+								},
+								{
+									"key": "asset",
+									"value": "MX"
+								},
+								{
+									"key": "timestamp",
+									"value": "{{timestamp}}"
+								},
+								{
+									"key": "signature",
+									"value": "{{signature}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Query Margin Account's priceIndex",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-mexc-apikey",
+								"value": "{{api_key}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{api_url}}/api/v3/margin/priceIndex?symbol=MXUSDT&timestamp={{timestamp}}&signature={{signature}}",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"api",
+								"v3",
+								"margin",
+								"priceIndex"
+							],
+							"query": [
+								{
+									"key": "symbol",
+									"value": "MXUSDT"
+								},
+								{
+									"key": "timestamp",
+									"value": "{{timestamp}}"
+								},
+								{
+									"key": "signature",
+									"value": "{{signature}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Query Margin Account's order",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-mexc-apikey",
+								"value": "{{api_key}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{api_url}}/api/v3/margin/order?orderId=746784754145300480&symbol=MXUSDT&recvWindow=60000&timestamp={{timestamp}}&signature={{signature}}",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"api",
+								"v3",
+								"margin",
+								"order"
+							],
+							"query": [
+								{
+									"key": "orderId",
+									"value": "746784754145300480"
+								},
+								{
+									"key": "symbol",
+									"value": "MXUSDT"
+								},
+								{
+									"key": "recvWindow",
+									"value": "60000"
+								},
+								{
+									"key": "timestamp",
+									"value": "{{timestamp}}"
+								},
+								{
+									"key": "signature",
+									"value": "{{signature}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Query Isolated Margin Account Info",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-mexc-apikey",
+								"value": "{{api_key}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{api_url}}/api/v3/margin/isolated/account?symbols=BTCUSDT&recvWindow=60000&timestamp={{timestamp}}&signature={{signature}}",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"api",
+								"v3",
+								"margin",
+								"isolated",
+								"account"
+							],
+							"query": [
+								{
+									"key": "symbols",
+									"value": "BTCUSDT"
+								},
+								{
+									"key": "recvWindow",
+									"value": "60000"
+								},
+								{
+									"key": "timestamp",
+									"value": "{{timestamp}}"
+								},
+								{
+									"key": "signature",
+									"value": "{{signature}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Query Margin Account's trigerOrder",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-mexc-apikey",
+								"value": "{{api_key}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{api_url}}/api/v3/margin/trigerOrder?timestamp={{timestamp}}&signature={{signature}}",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"api",
+								"v3",
+								"margin",
+								"trigerOrder"
+							],
+							"query": [
+								{
+									"key": "timestamp",
+									"value": "{{timestamp}}"
+								},
+								{
+									"key": "signature",
+									"value": "{{signature}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Query Margin Account's maxBorrowable",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-mexc-apikey",
+								"value": "{{api_key}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{api_url}}/api/v3/margin/maxBorrowable?symbol=BTCUSDT&asset=USDT&timestamp={{timestamp}}&signature={{signature}}",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"api",
+								"v3",
+								"margin",
+								"maxBorrowable"
+							],
+							"query": [
+								{
+									"key": "symbol",
+									"value": "BTCUSDT"
+								},
+								{
+									"key": "asset",
+									"value": "USDT"
+								},
+								{
+									"key": "timestamp",
+									"value": "{{timestamp}}"
+								},
+								{
+									"key": "signature",
+									"value": "{{signature}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Query Repay Record",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-mexc-apikey",
+								"value": "{{api_key}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{api_url}}/api/v3/margin/repay?symbol=MXUSDT&asset=MX&recvWindow=60000&timestamp={{timestamp}}&signature={{signature}}",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"api",
+								"v3",
+								"margin",
+								"repay"
+							],
+							"query": [
+								{
+									"key": "symbol",
+									"value": "MXUSDT"
+								},
+								{
+									"key": "asset",
+									"value": "MX"
+								},
+								{
+									"key": "recvWindow",
+									"value": "60000"
+								},
+								{
+									"key": "timestamp",
+									"value": "{{timestamp}}"
+								},
+								{
+									"key": "signature",
+									"value": "{{signature}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Query Solated Pair",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-mexc-apikey",
+								"value": "{{api_key}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{api_url}}/api/v3/margin/isolated/pair?symbol=BTCUSDT&timestamp={{timestamp}}&signature={{signature}}",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"api",
+								"v3",
+								"margin",
+								"isolated",
+								"pair"
+							],
+							"query": [
+								{
+									"key": "symbol",
+									"value": "BTCUSDT"
+								},
+								{
+									"key": "timestamp",
+									"value": "{{timestamp}}"
+								},
+								{
+									"key": "signature",
+									"value": "{{signature}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Query forceLiquidationRec",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-mexc-apikey",
+								"value": "{{api_key}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{api_url}}/api/v3/margin/forceLiquidationRec?symbol=MXUSDT&timestamp={{timestamp}}&signature={{signature}}",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"api",
+								"v3",
+								"margin",
+								"forceLiquidationRec"
+							],
+							"query": [
+								{
+									"key": "symbol",
+									"value": "MXUSDT"
+								},
+								{
+									"key": "timestamp",
+									"value": "{{timestamp}}"
+								},
+								{
+									"key": "signature",
+									"value": "{{signature}}"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Parent child account",
+			"item": [
+				{
+					"name": "new virtualSubAccount",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-mexc-apikey",
+								"value": "{{api_key}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{api_url}}/api/v3/sub-account/virtualSubAccount?subAccount=test07261234567803&note=testing &timestamp={{timestamp}}&signature={{signature}}",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"api",
+								"v3",
+								"sub-account",
+								"virtualSubAccount"
+							],
+							"query": [
+								{
+									"key": "subAccount",
+									"value": "test07261234567803",
+									"description": "subAccount"
+								},
+								{
+									"key": "note",
+									"value": "testing ",
+									"description": "remarks"
+								},
+								{
+									"key": "recvWindow",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "timestamp",
+									"value": "{{timestamp}}"
+								},
+								{
+									"key": "signature",
+									"value": "{{signature}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Query sub-account list",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-mexc-apikey",
+								"value": "{{api_key}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{api_url}}/api/v3/sub-account/list?timestamp={{timestamp}}&signature={{signature}}&recvWindow=60000",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"api",
+								"v3",
+								"sub-account",
+								"list"
+							],
+							"query": [
+								{
+									"key": "subAccount",
+									"value": "",
+									"description": "subAccount",
+									"disabled": true
+								},
+								{
+									"key": "isFreeze",
+									"value": "",
+									"description": "true or false",
+									"disabled": true
+								},
+								{
+									"key": "page",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "limit",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "timestamp",
+									"value": "{{timestamp}}"
+								},
+								{
+									"key": "signature",
+									"value": "{{signature}}"
+								},
+								{
+									"key": "recvWindow",
+									"value": "60000"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "new sub-account apiKey",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-mexc-apikey",
+								"value": "{{api_key}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{api_url}}/api/v3/sub-account/apiKey?subAccount=1152058321@qq.com&note=test&permissions=SPOT_DEAL_READ,SPOT_ACCOUNT_WRITE&timestamp={{timestamp}}&signature={{signature}}",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"api",
+								"v3",
+								"sub-account",
+								"apiKey"
+							],
+							"query": [
+								{
+									"key": "subAccount",
+									"value": "1152058321@qq.com"
+								},
+								{
+									"key": "note",
+									"value": "test"
+								},
+								{
+									"key": "permissions",
+									"value": "SPOT_DEAL_READ,SPOT_ACCOUNT_WRITE"
+								},
+								{
+									"key": "timestamp",
+									"value": "{{timestamp}}"
+								},
+								{
+									"key": "signature",
+									"value": "{{signature}}"
+								},
+								{
+									"key": "ip",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "recvWindow",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Query sub-account apiKey",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-mexc-apikey",
+								"value": "{{api_key}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{api_url}}/api/v3/sub-account/apiKey?subAccount=test0505&timestamp={{timestamp}}&signature={{signature}}",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"api",
+								"v3",
+								"sub-account",
+								"apiKey"
+							],
+							"query": [
+								{
+									"key": "subAccount",
+									"value": "test0505"
+								},
+								{
+									"key": "recvWindow",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "timestamp",
+									"value": "{{timestamp}}"
+								},
+								{
+									"key": "signature",
+									"value": "{{signature}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete sub-account apiKey",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "x-mexc-apikey",
+								"value": "{{api_key}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{api_url}}/api/v3/sub-account/apiKey?subAccount=1152058321@qq.com&apiKey=mx0M7w5LZh7bPK4PLA&signature={{signature}}&timestamp={{timestamp}}",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"api",
+								"v3",
+								"sub-account",
+								"apiKey"
+							],
+							"query": [
+								{
+									"key": "recvWindow",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "subAccount",
+									"value": "1152058321@qq.com"
+								},
+								{
+									"key": "apiKey",
+									"value": "mx0M7w5LZh7bPK4PLA"
+								},
+								{
+									"key": "signature",
+									"value": "{{signature}}"
+								},
+								{
+									"key": "timestamp",
+									"value": "{{timestamp}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Sub-account UniversalTransfer",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-mexc-apikey",
+								"value": "{{api_key}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{api_url}}/api/v3/capital/sub-account/universalTransfer?asset=USDT&amount=0.1&fromAccountType=SPOT&fromAccount=1152058321@qq.com&toAccountType=SPOT&toAccount=test0622&clientTranId=1111test&timestamp={{timestamp}}&signature={{signature}}",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"api",
+								"v3",
+								"capital",
+								"sub-account",
+								"universalTransfer"
+							],
+							"query": [
+								{
+									"key": "asset",
+									"value": "USDT"
+								},
+								{
+									"key": "amount",
+									"value": "0.1"
+								},
+								{
+									"key": "fromAccountType",
+									"value": "SPOT"
+								},
+								{
+									"key": "fromAccount",
+									"value": "1152058321@qq.com"
+								},
+								{
+									"key": "toAccountType",
+									"value": "SPOT"
+								},
+								{
+									"key": "toAccount",
+									"value": "test0622"
+								},
+								{
+									"key": "symbol",
+									"value": "MXUSDT",
+									"disabled": true
+								},
+								{
+									"key": "startTime",
+									"value": "1656603881000",
+									"disabled": true
+								},
+								{
+									"key": "clientTranId",
+									"value": "1111test"
+								},
+								{
+									"key": "endTime",
+									"value": "1656603895000",
+									"disabled": true
+								},
+								{
+									"key": "timestamp",
+									"value": "{{timestamp}}"
+								},
+								{
+									"key": "signature",
+									"value": "{{signature}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Query Sub-account UniversalTransfer Record",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-mexc-apikey",
+								"value": "{{api_key}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{api_url}}/api/v3/capital/sub-account/universalTransfer?asset=USDT&fromAccountType=SPOT&toAccountType=SPOT&toAccount=test0622&timestamp={{timestamp}}&signature={{signature}}",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"api",
+								"v3",
+								"capital",
+								"sub-account",
+								"universalTransfer"
+							],
+							"query": [
+								{
+									"key": "asset",
+									"value": "USDT"
+								},
+								{
+									"key": "amount",
+									"value": "2000.1111111111111111111",
+									"disabled": true
+								},
+								{
+									"key": "fromAccountType",
+									"value": "SPOT"
+								},
+								{
+									"key": "fromAccount",
+									"value": "792487830@qq.com",
+									"disabled": true
+								},
+								{
+									"key": "toAccountType",
+									"value": "SPOT"
+								},
+								{
+									"key": "toAccount",
+									"value": "test0622"
+								},
+								{
+									"key": "symbol",
+									"value": "MXUSDT",
+									"disabled": true
+								},
+								{
+									"key": "startTime",
+									"value": "1656603881000",
+									"disabled": true
+								},
+								{
+									"key": "recvWindow",
+									"value": "60000",
+									"disabled": true
+								},
+								{
+									"key": "timestamp",
+									"value": "{{timestamp}}"
+								},
+								{
+									"key": "signature",
+									"value": "{{signature}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Enable Futures For Sub-account",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-mexc-apikey",
+								"value": "{{api_key}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{api_url}}/api/v3/sub-account/futures?subAccount=test0726&timestamp={{timestamp}}&signature={{signature}}",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"api",
+								"v3",
+								"sub-account",
+								"futures"
+							],
+							"query": [
+								{
+									"key": "subAccount",
+									"value": "test0726"
+								},
+								{
+									"key": "timestamp",
+									"value": "{{timestamp}}"
+								},
+								{
+									"key": "signature",
+									"value": "{{signature}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Enable Margin For Sub-account",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-mexc-apikey",
+								"value": "{{api_key}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{api_url}}/api/v3/sub-account/margin?subAccount=1152058321@qq.com&timestamp={{timestamp}}&signature={{signature}}",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"api",
+								"v3",
+								"sub-account",
+								"margin"
+							],
+							"query": [
+								{
+									"key": "subAccount",
+									"value": "1152058321@qq.com"
+								},
+								{
+									"key": "timestamp",
+									"value": "{{timestamp}}"
+								},
+								{
+									"key": "signature",
+									"value": "{{signature}}"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Rebate",
+			"item": [
+				{
+					"name": "Get Rebate History Records",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-mexc-apikey",
+								"value": "{{api_key}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{api_url}}/api/v3/rebate/taxQuery?recvWindow=60000&timestamp={{timestamp}}&signature={{signature}}",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"api",
+								"v3",
+								"rebate",
+								"taxQuery"
+							],
+							"query": [
+								{
+									"key": "recvWindow",
+									"value": "60000"
+								},
+								{
+									"key": "timestamp",
+									"value": "{{timestamp}}"
+								},
+								{
+									"key": "signature",
+									"value": "{{signature}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Rebate Records Detail",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-mexc-apikey",
+								"value": "{{api_key}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{api_url}}/api/v3/rebate/detail?recvWindow=60000&timestamp={{timestamp}}&signature={{signature}}",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"api",
+								"v3",
+								"rebate",
+								"detail"
+							],
+							"query": [
+								{
+									"key": "recvWindow",
+									"value": "60000"
+								},
+								{
+									"key": "timestamp",
+									"value": "{{timestamp}}"
+								},
+								{
+									"key": "signature",
+									"value": "{{signature}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Self Rebate Records Detail",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-mexc-apikey",
+								"value": "{{api_key}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{api_url}}/api/v3/rebate/detail/kickback?recvWindow=60000&timestamp={{timestamp}}&signature={{signature}}",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"api",
+								"v3",
+								"rebate",
+								"detail",
+								"kickback"
+							],
+							"query": [
+								{
+									"key": "recvWindow",
+									"value": "60000"
+								},
+								{
+									"key": "timestamp",
+									"value": "{{timestamp}}"
+								},
+								{
+									"key": "signature",
+									"value": "{{signature}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Query ReferCode",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-mexc-apikey",
+								"value": "{{api_key}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{api_url}}/api/v3/rebate/referCode?recvWindow=60000&timestamp={{timestamp}}&signature={{signature}}",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"api",
+								"v3",
+								"rebate",
+								"referCode"
+							],
+							"query": [
+								{
+									"key": "recvWindow",
+									"value": "60000"
+								},
+								{
+									"key": "timestamp",
+									"value": "{{timestamp}}"
+								},
+								{
+									"key": "signature",
+									"value": "{{signature}}"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					"const ts = Date.now();",
+					"pm.environment.set(\"timestamp\", ts);",
+					"console.log('timestamp',ts);",
+					"",
+					"let paramsObject = {};",
+					"",
+					"const api_secret = pm.environment.get(\"api_secret\");",
+					"const api_key = pm.environment.get(\"api_key\");",
+					"console.log('api_secret',api_secret);",
+					"console.log('x-mexc-apikey',api_key);",
+					"",
+					"const parameters = pm.request.url.query;",
+					"console.log('parameters', parameters);",
+					"parameters.map((param) => {",
+					"    if (param.key != 'signature' &&",
+					"        param.key != 'timestamp' &&",
+					"        !is_empty(param.value) &&",
+					"        !is_disabled(param.disabled)) {",
+					"        paramsObject[param.key] = param.value;",
+					"    }",
+					"})",
+					"",
+					"Object.assign(paramsObject, { 'timestamp': ts });",
+					"",
+					"if (api_secret) {",
+					"    let queryString = Object.keys(paramsObject).map((key) => {",
+					"        return `${key}=${paramsObject[key]}`;",
+					"    }).join('&');",
+					"    console.log('queryString',queryString);",
+					"",
+					"    const signature = CryptoJS.HmacSHA256(queryString, api_secret).toString();",
+					"    console.log('signature',signature)",
+					"    pm.environment.set(\"signature\", signature);",
+					"}",
+					"",
+					"",
+					"",
+					"function is_disabled(str) {",
+					"    return str == true;",
+					"}",
+					"",
+					"function is_empty(str) {",
+					"    if (typeof str == 'undefined' ||",
+					"        !str ||",
+					"        str.length === 0 ||",
+					"        str === \"\" ||",
+					"        !/[^\\s]/.test(str) ||",
+					"        /^\\s*$/.test(str) ||",
+					"        str.replace(/\\s/g, \"\") === \"\") {",
+					"        return true;",
+					"    }",
+					"    else {",
+					"        return false;",
+					"    }",
+					"}"
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
