@@ -1,8 +1,9 @@
 {
 	"info": {
-		"_postman_id": "41d7fdb5-e229-4510-9ee9-e5162887ebd1",
+		"_postman_id": "67911bd4-0168-458c-82e1-e153c43f414d",
 		"name": "MEXC V1 contract",
-		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "35339735"
 	},
 	"item": [
 		{
@@ -54,12 +55,9 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "https://contract.mexc.com/api/v1/contract/support_currencies",
-							"protocol": "https",
+							"raw": "{{api_url}}/api/v1/contract/support_currencies",
 							"host": [
-								"contract",
-								"mexc",
-								"com"
+								"{{api_url}}"
 							],
 							"path": [
 								"api",
@@ -482,12 +480,9 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "https://contract.mexc.com/api/v1/private/account/assets",
-							"protocol": "https",
+							"raw": "{{api_url}}/api/v1/private/account/assets",
 							"host": [
-								"contract",
-								"mexc",
-								"com"
+								"{{api_url}}"
 							],
 							"path": [
 								"api",
@@ -686,31 +681,37 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "https://contract.mexc.com/api/v1/private/order/list/open_orders/BTC_USDT?page_num=1&page_size=20",
-							"protocol": "https",
+							"raw": "{{api_url}}api/v1/private/order/open_orders/BTC_USDT",
 							"host": [
-								"contract",
-								"mexc",
-								"com"
+								"{{api_url}}api"
+							],
+							"path": [
+								"v1",
+								"private",
+								"order",
+								"open_orders",
+								"BTC_USDT"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CloseOrders",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{api_url}}/api/v1/private/order/close_orders",
+							"host": [
+								"{{api_url}}"
 							],
 							"path": [
 								"api",
 								"v1",
 								"private",
 								"order",
-								"list",
-								"open_orders",
-								"BTC_USDT"
-							],
-							"query": [
-								{
-									"key": "page_num",
-									"value": "1"
-								},
-								{
-									"key": "page_size",
-									"value": "20"
-								}
+								"close_orders"
 							]
 						}
 					},
@@ -786,29 +787,29 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "https://contract.mexc.com/api/v1/private/order/list/history_orders?page_num=1&page_size=20&symbol=BTC_USDT",
-							"protocol": "https",
+							"raw": "{{api_url}}/api/v1/private/order/external/BTC_USDT/_m_b0ecfa1ea7a248be84f5a08cc5f98aa5",
 							"host": [
-								"contract",
-								"mexc",
-								"com"
+								"{{api_url}}"
 							],
 							"path": [
 								"api",
 								"v1",
 								"private",
 								"order",
-								"list",
-								"history_orders"
+								"external",
+								"BTC_USDT",
+								"_m_b0ecfa1ea7a248be84f5a08cc5f98aa5"
 							],
 							"query": [
 								{
 									"key": "page_num",
-									"value": "1"
+									"value": "1",
+									"disabled": true
 								},
 								{
 									"key": "page_size",
-									"value": "20"
+									"value": "1",
+									"disabled": true
 								},
 								{
 									"key": "states",
@@ -834,10 +835,6 @@
 									"key": "side",
 									"value": "",
 									"disabled": true
-								},
-								{
-									"key": "symbol",
-									"value": "BTC_USDT"
 								}
 							]
 						}
@@ -875,12 +872,9 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "https://contract.mexc.com/api/v1/private/order/batch_query?order_ids=1423534534",
-							"protocol": "https",
+							"raw": "{{api_url}}/api/v1/private/order/batch_query?order_ids=739106551624717312",
 							"host": [
-								"contract",
-								"mexc",
-								"com"
+								"{{api_url}}"
 							],
 							"path": [
 								"api",
@@ -892,7 +886,7 @@
 							"query": [
 								{
 									"key": "order_ids",
-									"value": "1423534534",
+									"value": "739106551624717312",
 									"description": "order number array，can be separated by \",\" for example :order_ids = 1,2,3(maximum 50 orders):"
 								}
 							]
@@ -926,12 +920,12 @@
 					"response": []
 				},
 				{
-					"name": "OrderDeals",
+					"name": "orderDeals",
 					"request": {
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{api_url}}/api/v1/private/order/list/order_deals?symbol=LUNA_USDT&page_num=1&page_size=20",
+							"raw": "{{api_url}}/api/v1/private/order/list/order_deals/v3?page_num=1&page_size=20&symbol=BTC_USDT",
 							"host": [
 								"{{api_url}}"
 							],
@@ -941,13 +935,10 @@
 								"private",
 								"order",
 								"list",
-								"order_deals"
+								"order_deals",
+								"v3"
 							],
 							"query": [
-								{
-									"key": "symbol",
-									"value": "LUNA_USDT"
-								},
 								{
 									"key": "page_num",
 									"value": "1"
@@ -965,6 +956,10 @@
 									"key": "end_time",
 									"value": "100000",
 									"disabled": true
+								},
+								{
+									"key": "symbol",
+									"value": "BTC_USDT"
 								}
 							]
 						}
@@ -972,7 +967,7 @@
 					"response": []
 				},
 				{
-					"name": "Planorder",
+					"name": "PlanOrder",
 					"request": {
 						"method": "GET",
 						"header": [],
@@ -1027,7 +1022,165 @@
 					"response": []
 				},
 				{
+					"name": "ChangePlanOrder",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"symbol\":\"DOGE_USDT\",\"orderId\":\"739117470826910784\",\"price\":0.0001,\"trend\":1,\"vol\":1,\"orderType\":1,\"triggerPrice\":0.06,\"from\":2}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api_url}}/api/v1/private/planorder/change_price",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"private",
+								"planorder",
+								"change_price"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ChangePlanOrderStopOrder",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"symbol\":\"DOGE_USDT\",\"orderId\":\"739117470826910784\",\"triggerPrice\":0.00003}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api_url}}/api/v1/private/planorder/change_price",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"private",
+								"planorder",
+								"change_price"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "StopOrderOpenOrders",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{api_url}}/api/v1/private/stoporder/open_orders",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"private",
+								"stoporder",
+								"open_orders"
+							],
+							"query": [
+								{
+									"key": "symbol",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "states",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "start_time",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "end_time",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
 					"name": "Stoporder",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://contract.mexc.com/api/v1/private/stoporder/list/orders?page_num=1&page_size=20",
+							"protocol": "https",
+							"host": [
+								"contract",
+								"mexc",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"private",
+								"stoporder",
+								"list",
+								"orders"
+							],
+							"query": [
+								{
+									"key": "symbol",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "states",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "start_time",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "end_time",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "page_num",
+									"value": "1"
+								},
+								{
+									"key": "page_size",
+									"value": "20"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "StoporderOpenOrder",
 					"request": {
 						"method": "GET",
 						"header": [],
@@ -1173,6 +1326,48 @@
 					"response": []
 				},
 				{
+					"name": "ChangeAutoAddIm",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \"positionId\": 1109973831, \"amount\": 1, \"type\": \"ADD\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api_url}}/api/v1/private/position/change_auto_add_im",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"private",
+								"position",
+								"change_auto_add_im"
+							],
+							"query": [
+								{
+									"key": "positionId",
+									"value": null,
+									"disabled": true
+								},
+								{
+									"key": "isEnabled",
+									"value": "false",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
 					"name": "Leverage",
 					"request": {
 						"method": "GET",
@@ -1280,16 +1475,13 @@
 					"response": []
 				},
 				{
-					"name": "PlaceNewOrder",
-					"protocolProfileBehavior": {
-						"tlsDisabledProtocols": []
-					},
+					"name": "PositionReverse",
 					"request": {
 						"method": "POST",
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\"symbol\": \"DOGE_USDT\",\"price\": \"0.16\",\"vol\": 1,\"leverage\": 20,\"side\": 3,\"type\": 5,\"openType\": 1, \"positionMode\": 2}",
+							"raw": "{ \"positionId\": 1110417836, \"symbol\": \"DOGE_USDT\",\"vol\": 100}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -1297,7 +1489,93 @@
 							}
 						},
 						"url": {
-							"raw": "{{api_url}}/api/v1/private/order/submit",
+							"raw": "{{api_url}}/api/v1/private/position/reverse?symbol=DOGE_USDT&positionId=1110417836&vol=100",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"private",
+								"position",
+								"reverse"
+							],
+							"query": [
+								{
+									"key": "symbol",
+									"value": "DOGE_USDT",
+									"type": "text"
+								},
+								{
+									"key": "positionId",
+									"value": "1110417836",
+									"type": "text"
+								},
+								{
+									"key": "vol",
+									"value": "100",
+									"type": "text"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PositionCloseAll",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \"positionId\": 1110089112, \"symbol\": \"BTC_USDT\",\"vol \": 0.0001}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api_url}}/api/v1/private/position/close_all",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"private",
+								"position",
+								"close_all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PlaceNewOrder",
+					"protocolProfileBehavior": {
+						"tlsDisabledProtocols": []
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Language",
+								"value": "English",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"symbol\": \"DGBUSDT\", \"vol\": 10, \"price\": \"0.008820\", \"side\": 1, \"leverage\": 10, \"openType\": 2, \"positionMode\": 2, \"externalOid\": \"1100000002264301970\", \"type\": 1}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api_url}}/api/v1/private/order/create",
 							"host": [
 								"{{api_url}}"
 							],
@@ -1306,7 +1584,164 @@
 								"v1",
 								"private",
 								"order",
-								"submit"
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PlaceStopOrder",
+					"protocolProfileBehavior": {
+						"tlsDisabledProtocols": []
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"symbol\":\"DOGE_USDT\",\"profitTrend\":1,\"lossTrend\":1,\"positionId\":\"1110417836\",\"vol\":1,\"stopLossType\":1,\"stopLossOrderPrice\":0.19,\"stopLossPrice\":0.19}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api_url}}/api/v1/private/stoporder/place",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"private",
+								"stoporder",
+								"place"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ChangeLimitOrder",
+					"protocolProfileBehavior": {
+						"tlsDisabledProtocols": []
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"symbol\": \"BTC_USDT\",\"profitTrend\": 1,\"positionId\":\"1110370465\" ,\"vol\": 1,\"takeProfitOrderPrice\": 110610,\"takeProfitType\": 1}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api_url}}/api/v1/private/stoporder/place",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"private",
+								"stoporder",
+								"place"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Open order total count",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{api_url}}/api/v1/private/position/leverage?symbol=LUNA_USDT",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"private",
+								"position",
+								"leverage"
+							],
+							"query": [
+								{
+									"key": "symbol",
+									"value": "LUNA_USDT"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "chase limit order",
+					"protocolProfileBehavior": {
+						"tlsDisabledProtocols": []
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"orderId\": \"739204819784386560\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api_url}}/api/v1/private/order/chase_limit_order",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"private",
+								"order",
+								"chase_limit_order"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PlacePlanOrder",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"symbol\":\"DOGE_USDT\",\"price\":\"0.06\",\"vol\":1,\"leverage\":20,\"side\":1,\"openType\":1,\"triggerPrice\":0.06,\"triggerType\":2,\"executeCycle\":1,\"orderType\":5,\"trend\":1}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api_url}}/api/v1/private/planorder/place/v2",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"private",
+								"planorder",
+								"place",
+								"v2"
 							]
 						}
 					},
@@ -1406,13 +1841,43 @@
 					"response": []
 				},
 				{
+					"name": "CancelWithExternalBatch",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"symbol\": \"DOGE_USDT\",\"externalOid\": \"218699511659380224\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api_url}}/api/v1/private/order/cancel_with_external",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"private",
+								"order",
+								"cancel_with_external"
+							]
+						}
+					},
+					"response": []
+				},
+				{
 					"name": "CancelAll",
 					"request": {
 						"method": "POST",
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\"symbol\": \"DOGE_USDT\"}",
+							"raw": "{\"symbol\":\"\"}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -1436,13 +1901,13 @@
 					"response": []
 				},
 				{
-					"name": "PlacePlanOrder",
+					"name": "batch query with external",
 					"request": {
 						"method": "POST",
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\"symbol\":\"DOGE_USDT\",\"price\":\"0.06\",\"vol\":1,\"leverage\":20,\"side\":1,\"openType\":1,\"triggerPrice\":0.06,\"triggerType\":2,\"executeCycle\":1,\"orderType\":5,\"trend\":1}",
+							"raw": "[{\"symbol\":\"BTC_USDT\", \"externalOid\":\"_m_903a9f81cc1148be99ac9ece15981374\"}]  ",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -1450,7 +1915,7 @@
 							}
 						},
 						"url": {
-							"raw": "{{api_url}}/api/v1/private/planorder/place",
+							"raw": "{{api_url}}/api/v1/private/order/batch_query_with_external",
 							"host": [
 								"{{api_url}}"
 							],
@@ -1458,8 +1923,33 @@
 								"api",
 								"v1",
 								"private",
-								"planorder",
-								"place"
+								"order",
+								"batch_query_with_external"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "change risk level",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"openType\": 1,\"leverage\": 20,\"symbol\": \"BTC_USDT\",\"positionType\": 1}"
+						},
+						"url": {
+							"raw": "{{api_url}}/api/v1/private/account/change_risk_level",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"private",
+								"account",
+								"change_risk_level"
 							]
 						}
 					},
@@ -1472,7 +1962,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "[281077101510558208]",
+							"raw": "[739213065539064832]",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -1651,6 +2141,787 @@
 						}
 					},
 					"response": []
+				},
+				{
+					"name": "PlaceTrackOrder",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"symbol\":\"DOGE_USDT\",\"price\":\"0.06\",\"vol\":100,\"leverage\":2,\"side\":1,\"openType\":1,\"backType\":1,\"backValue\":0.02,\"positionMode\":1,\"trend\":1}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api_url}}/api/v1/private/trackorder/place",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"private",
+								"trackorder",
+								"place"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Cancel TrackOrder",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"symbol\":\"DOGE_USDT\",\"price\":\"0.06\",\"vol\":100,\"leverage\":2,\"side\":1,\"openType\":1,\"backType\":1,\"backValue\":0.02,\"positionMode\":1,\"trend\":1}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api_url}}/api/v1/private/trackorder/place",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"private",
+								"trackorder",
+								"place"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ChangeTrackOrder",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"symbol\":\"DOGE_USDT\",\"price\":\"0.06\",\"vol\":100,\"leverage\":2,\"side\":1,\"openType\":1,\"backType\":1,\"backValue\":0.02,\"positionMode\":1,\"trend\":1}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api_url}}/api/v1/private/trackorder/place",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"private",
+								"trackorder",
+								"place"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Gettrackorder",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api_url}}/api/v1/private/trackorder/list/orders?states=1",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"private",
+								"trackorder",
+								"list",
+								"orders"
+							],
+							"query": [
+								{
+									"key": "states",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "profit rate",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api_url}}/api/v1/private/account/profit_rate/1",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"private",
+								"account",
+								"profit_rate",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "asset analysis",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api_url}}/api/v1/private/account/asset/analysis/1?currency=BTC",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"private",
+								"account",
+								"asset",
+								"analysis",
+								"1"
+							],
+							"query": [
+								{
+									"key": "currency",
+									"value": "BTC"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "feeDeductConfigs",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api_url}}/api/v1/private/account/feeDeductConfigs",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"private",
+								"account",
+								"feeDeductConfigs"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "yesterday pnl",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api_url}}/api/v1/private/account/asset/analysis/yesterday_pnl",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"private",
+								"account",
+								"asset",
+								"analysis",
+								"yesterday_pnl"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "asset analysis",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "WEBa156243697fcf9540e9d32ecc060c958b22838f937ef42ef65902263ac5b640d",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Cookie",
+								"value": "_ga=GA1.1.1252371666.1720344561; _fbp=fb.1.1720344561464.21094400854987975; _ym_uid=1735920926387780910; _ga_XGQZQ7Q7T5=GS2.1.s1749641977$o2$g0$t1749641977$j60$l0$h0; mxc_reset_tradingview_key=true; _ym_d=1753171639; _uetvid=7e5df030696511f0aa91d37c6b15b48a; _clck=1h1h6wi%5E2%5Efz1%5E0%5E2032; mxc_theme_main=dark; x-mxc-fingerprint=UF6dMjBAkzAYDvYvBUl7; mxc_theme_upcolor=upgreen; g_state={\"i_l\":0,\"i_ll\":1761374263785,\"i_b\":\"l3j0/TYiGAGs/rRBOclNK6DApjnFn7qOTM0AnINkc40\"}; mxc_display_format=indented; uc_token=WEBa156243697fcf9540e9d32ecc060c958b22838f937ef42ef65902263ac5b640d; u_id=WEBa156243697fcf9540e9d32ecc060c958b22838f937ef42ef65902263ac5b640d; me_push_open_date_utc8_c4d4df6730d116a3=2025-11-01; sensorsdata2015jssdkcross=%7B%22distinct_id%22%3A%221771f22d91134d999082fcbbb4169812%22%2C%22first_id%22%3A%221908c86b9acce2-0a363853b7ccdf-1c525637-1484784-1908c86b9ad1b00%22%2C%22props%22%3A%7B%22%24latest_traffic_source_type%22%3A%22%E7%9B%B4%E6%8E%A5%E6%B5%81%E9%87%8F%22%2C%22%24latest_search_keyword%22%3A%22%E6%9C%AA%E5%8F%96%E5%88%B0%E5%80%BC_%E7%9B%B4%E6%8E%A5%E6%89%93%E5%BC%80%22%2C%22%24latest_referrer%22%3A%22%22%2C%22%24latest_utm_source%22%3A%22mexc%22%2C%22%24latest_utm_medium%22%3A%22newfuturesheader%22%2C%22%24latest_utm_campaign%22%3A%22futures_details%22%2C%22%24latest_landing_page%22%3A%22https%3A%2F%2Fwww.mexc.co%2Fzh-TW%2Fzero-fee%22%7D%2C%22identities%22%3A%22eyIkaWRlbnRpdHlfY29va2llX2lkIjoiMTkwOGM4NmI5YWNjZTItMGEzNjM4NTNiN2NjZGYtMWM1MjU2MzctMTQ4NDc4NC0xOTA4Yzg2YjlhZDFiMDAiLCIkaWRlbnRpdHlfbG9naW5faWQiOiIxNzcxZjIyZDkxMTM0ZDk5OTA4MmZjYmJiNDE2OTgxMiJ9%22%2C%22history_login_id%22%3A%7B%22name%22%3A%22%24identity_login_id%22%2C%22value%22%3A%221771f22d91134d999082fcbbb4169812%22%7D%2C%22%24device_id%22%3A%221908c86b9acce2-0a363853b7ccdf-1c525637-1484784-1908c86b9ad1b00%22%7D; _vid_t=4CSvytiDAhWFmemJAPthOGSAgGGGw0IlvknQJ6LIaCuycitk/87izHPDJ236WcveYWQwH4M7jtQh6YshsFpcMa2TcdroGky4so8hBwk=; mexc_fingerprint_visitorId=UF6dMjBAkzAYDvYvBUl7; mexc_fingerprint_requestId=1762159887912.IrcQH0; NEXT_LOCALE=zh-MY; _ga_L6XJCQTK75=GS2.1.s1762183216$o141$g0$t1762183216$j60$l0$h0; __cf_bm=VC.nFqo9_omyHY1inJ62l.pDZzwUhsFKu0Q3.MUuGS4-1762239809-1.0.1.1-As1E1qM9GIUT3bq50xMa3o1Amy3lK.MqicPCWF0Qs3WbkzBI15R_TaXmU8S3Q0FPsEMxwN.NSYY8aEevZ6c12gSRrKQQQAtCa4HQOYCprn8; CLIENT_LANG=zh-MY",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"startTime\": \"1666612800000\",\"endTime\": \"1666612810000\",\"reverse\":0}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api_url}}/api/v1/private/account/asset/analysis/v3",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"private",
+								"account",
+								"asset",
+								"analysis",
+								"v3"
+							],
+							"query": [
+								{
+									"key": "startTime",
+									"value": "1666612800000",
+									"disabled": true
+								},
+								{
+									"key": "endTime",
+									"value": "1762075080000",
+									"disabled": true
+								},
+								{
+									"key": "reverse",
+									"value": "0",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "includeUnrealisedPnl",
+									"value": "0",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "symbol",
+									"value": null,
+									"type": "text",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "analysis calendar daily",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "WEBa156243697fcf9540e9d32ecc060c958b22838f937ef42ef65902263ac5b640d",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"startTime\": \"1666612800000\",\"endTime\": \"1666612810000\",\"reverse\":0}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api_url}}/api/v1/private/account/asset/analysis/calendar/daily/v3",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"private",
+								"account",
+								"asset",
+								"analysis",
+								"calendar",
+								"daily",
+								"v3"
+							],
+							"query": [
+								{
+									"key": "startTime",
+									"value": "1666612800000",
+									"disabled": true
+								},
+								{
+									"key": "endTime",
+									"value": "1666612800000",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "analysis calendar monthly",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"startTime\": \"1666612800000\",\"endTime\": \"1666612810000\",\"reverse\":0}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api_url}}/api/v1/private/account/asset/analysis/calendar/monthly/v3",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"private",
+								"account",
+								"asset",
+								"analysis",
+								"calendar",
+								"monthly",
+								"v3"
+							],
+							"query": [
+								{
+									"key": "startTime",
+									"value": "1666612800000",
+									"disabled": true
+								},
+								{
+									"key": "endTime",
+									"value": "1666612800000",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "asset analysis recent",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"startTime\": \"1666612800000\",\"endTime\": \"1666612810000\",\"reverse\":0}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api_url}}/api/v1/private/account/asset/analysis/recent/v3",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"private",
+								"account",
+								"asset",
+								"analysis",
+								"recent",
+								"v3"
+							],
+							"query": [
+								{
+									"key": "startTime",
+									"value": "1666612800000",
+									"disabled": true
+								},
+								{
+									"key": "endTime",
+									"value": "1666612800000",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "analysis today pnl",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api_url}}/api/v1/private/account/asset/analysis/today_pnl",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"private",
+								"account",
+								"asset",
+								"analysis",
+								"today_pnl"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "contractFeeDiscountConfig",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api_url}}/api/v1/private/account/config/contractFeeDiscountConfig",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"private",
+								"account",
+								"config",
+								"contractFeeDiscountConfig"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "discountType",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api_url}}/api/v1/private/account/discountType",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"private",
+								"account",
+								"discountType"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "analysis export",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api_url}}/api/v1/private/account/asset/analysis/export?timezone-login=UTC+08:00",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"private",
+								"account",
+								"asset",
+								"analysis",
+								"export"
+							],
+							"query": [
+								{
+									"key": "timezone-login",
+									"value": "UTC+08:00"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "fee rate",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api_url}}/api/v1/private/account/contract/fee_rate?page_size=2&page_size",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"private",
+								"account",
+								"contract",
+								"fee_rate"
+							],
+							"query": [
+								{
+									"key": "page_size",
+									"value": "2"
+								},
+								{
+									"key": "page_size",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "order deal fee total",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api_url}}/api/v1/private/account/asset_book/order_deal_fee/total",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"private",
+								"account",
+								"asset_book",
+								"order_deal_fee",
+								"total"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "zero fee rate",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api_url}}/api/v1/private/account/contract/zero_fee_rate",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"private",
+								"account",
+								"contract",
+								"zero_fee_rate"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "preferred symbols",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api_url}}/api/v1/private/account/preferred_symbols",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"private",
+								"account",
+								"preferred_symbols"
+							]
+						}
+					},
+					"response": []
 				}
 			]
 		}
@@ -1660,6 +2931,7 @@
 			"listen": "prerequest",
 			"script": {
 				"type": "text/javascript",
+				"requests": {},
 				"exec": [
 					"const ApiKey = pm.environment.get(\"api_key\");;",
 					"const ApiSec = pm.environment.get(\"api_secret\");;",
@@ -1667,22 +2939,14 @@
 					"const method = pm.request.method;",
 					"let objectString = ApiKey + stemp",
 					"let params = {}",
+					"let specilUris =['']",
 					"if (method === 'POST') {",
-					"    objectString += pm.request.body.raw;",
+					"   ",
+					"        objectString += pm.request.body;",
+					"     ",
 					"} else {",
 					"   params = pm.request.url.query;",
 					"   ",
-					"    // objectString += params.map((key) => {",
-					"    //     console.log(`key->`,!!params[key] == true );",
-					"",
-					"    //     return !key.disabled ? `${key}=${encodeURIComponent(params[key])}`:'';",
-					"    // }).join('&');",
-					"",
-					"    // for(var i in params){",
-					"    //      console.log( params[i].key+params[i].value);",
-					"    //      console.log(params[i].value != '');",
-					"",
-					"    // }",
 					"",
 					"    objectString += params;",
 					"}",
@@ -1725,6 +2989,7 @@
 			"listen": "test",
 			"script": {
 				"type": "text/javascript",
+				"requests": {},
 				"exec": [
 					""
 				]
