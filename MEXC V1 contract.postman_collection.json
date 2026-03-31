@@ -1,7 +1,7 @@
 {
 	"info": {
-		"_postman_id": "67911bd4-0168-458c-82e1-e153c43f414d",
-		"name": "MEXC V1 contract",
+		"_postman_id": "b4824a74-97cc-4cd5-be26-a420667a2a6c",
+		"name": "MEXC V1 contract Copy",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "35339735"
 	},
@@ -681,16 +681,17 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{api_url}}api/v1/private/order/open_orders/BTC_USDT",
+							"raw": "{{api_url}}/api/v1/private/order/open_orders/",
 							"host": [
-								"{{api_url}}api"
+								"{{api_url}}"
 							],
 							"path": [
+								"api",
 								"v1",
 								"private",
 								"order",
 								"open_orders",
-								"BTC_USDT"
+								""
 							]
 						}
 					},
@@ -698,6 +699,27 @@
 				},
 				{
 					"name": "CloseOrders",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{api_url}}/api/v1/private/order/close_orders",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"private",
+								"order",
+								"close_orders"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "open orders",
 					"request": {
 						"method": "GET",
 						"header": [],
@@ -925,7 +947,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{api_url}}/api/v1/private/order/list/order_deals/v3?page_num=1&page_size=20&symbol=BTC_USDT",
+							"raw": "{{api_url}}/api/v1/private/order/list/order_deals/v3?page_num=1&page_size=20&symbol=DOGE_USDT",
 							"host": [
 								"{{api_url}}"
 							],
@@ -959,7 +981,7 @@
 								},
 								{
 									"key": "symbol",
-									"value": "BTC_USDT"
+									"value": "DOGE_USDT"
 								}
 							]
 						}
@@ -1567,7 +1589,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\"symbol\": \"DGBUSDT\", \"vol\": 10, \"price\": \"0.008820\", \"side\": 1, \"leverage\": 10, \"openType\": 2, \"positionMode\": 2, \"externalOid\": \"1100000002264301970\", \"type\": 1}",
+							"raw": "{\"symbol\": \"BCH_USDT\", \"vol\": 10, \"price\": \"461\", \"side\": 1, \"leverage\": 10, \"openType\": 2, \"positionMode\": 2, \"externalOid\": \"\", \"type\": 2}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -1757,7 +1779,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "[\n  {\n    \"symbol\": \"BTC_USD\",\n    \"price\": 8800,\n    \"vol\": 100,\n    \"leverage\": 20,\n    \"side\": 1,\n    \"type\": 1,\n    \"openType\": 1,\n    \"externalOid\": \"order1\"\n  },\n  {\n    \"symbol\": \"BTC_USD\",\n    \"price\": 500,\n    \"vol\": 100,\n    \"leverage\": 50,\n    \"side\": 3,\n    \"type\": 1,\n    \"openType\": 1,\n    \"externalOid\": \"order2\"\n  }\n]",
+							"raw": "[\n  {\n    \"symbol\": \"BTC_USDT\",\n    \"price\": 8800,\n    \"vol\": 100,\n    \"leverage\": 20,\n    \"side\": 1,\n    \"type\": 1,\n    \"openType\": 1,\n    \"externalOid\": \"order1\"\n  },\n  {\n    \"symbol\": \"BTC_USDT\",\n    \"price\": 500,\n    \"vol\": 100,\n    \"leverage\": 50,\n    \"side\": 3,\n    \"type\": 1,\n    \"openType\": 1,\n    \"externalOid\": \"order2\"\n  }\n]",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -1765,7 +1787,7 @@
 							}
 						},
 						"url": {
-							"raw": "{{api_url}}/api/v1/private/order/submit",
+							"raw": "{{api_url}}/api/v1/private/order/submit_batch",
 							"host": [
 								"{{api_url}}"
 							],
@@ -1774,7 +1796,7 @@
 								"v1",
 								"private",
 								"order",
-								"submit"
+								"submit_batch"
 							]
 						}
 					},
@@ -2419,20 +2441,7 @@
 					"name": "asset analysis",
 					"request": {
 						"method": "POST",
-						"header": [
-							{
-								"key": "Authorization",
-								"value": "WEBa156243697fcf9540e9d32ecc060c958b22838f937ef42ef65902263ac5b640d",
-								"type": "text",
-								"disabled": true
-							},
-							{
-								"key": "Cookie",
-								"value": "_ga=GA1.1.1252371666.1720344561; _fbp=fb.1.1720344561464.21094400854987975; _ym_uid=1735920926387780910; _ga_XGQZQ7Q7T5=GS2.1.s1749641977$o2$g0$t1749641977$j60$l0$h0; mxc_reset_tradingview_key=true; _ym_d=1753171639; _uetvid=7e5df030696511f0aa91d37c6b15b48a; _clck=1h1h6wi%5E2%5Efz1%5E0%5E2032; mxc_theme_main=dark; x-mxc-fingerprint=UF6dMjBAkzAYDvYvBUl7; mxc_theme_upcolor=upgreen; g_state={\"i_l\":0,\"i_ll\":1761374263785,\"i_b\":\"l3j0/TYiGAGs/rRBOclNK6DApjnFn7qOTM0AnINkc40\"}; mxc_display_format=indented; uc_token=WEBa156243697fcf9540e9d32ecc060c958b22838f937ef42ef65902263ac5b640d; u_id=WEBa156243697fcf9540e9d32ecc060c958b22838f937ef42ef65902263ac5b640d; me_push_open_date_utc8_c4d4df6730d116a3=2025-11-01; sensorsdata2015jssdkcross=%7B%22distinct_id%22%3A%221771f22d91134d999082fcbbb4169812%22%2C%22first_id%22%3A%221908c86b9acce2-0a363853b7ccdf-1c525637-1484784-1908c86b9ad1b00%22%2C%22props%22%3A%7B%22%24latest_traffic_source_type%22%3A%22%E7%9B%B4%E6%8E%A5%E6%B5%81%E9%87%8F%22%2C%22%24latest_search_keyword%22%3A%22%E6%9C%AA%E5%8F%96%E5%88%B0%E5%80%BC_%E7%9B%B4%E6%8E%A5%E6%89%93%E5%BC%80%22%2C%22%24latest_referrer%22%3A%22%22%2C%22%24latest_utm_source%22%3A%22mexc%22%2C%22%24latest_utm_medium%22%3A%22newfuturesheader%22%2C%22%24latest_utm_campaign%22%3A%22futures_details%22%2C%22%24latest_landing_page%22%3A%22https%3A%2F%2Fwww.mexc.co%2Fzh-TW%2Fzero-fee%22%7D%2C%22identities%22%3A%22eyIkaWRlbnRpdHlfY29va2llX2lkIjoiMTkwOGM4NmI5YWNjZTItMGEzNjM4NTNiN2NjZGYtMWM1MjU2MzctMTQ4NDc4NC0xOTA4Yzg2YjlhZDFiMDAiLCIkaWRlbnRpdHlfbG9naW5faWQiOiIxNzcxZjIyZDkxMTM0ZDk5OTA4MmZjYmJiNDE2OTgxMiJ9%22%2C%22history_login_id%22%3A%7B%22name%22%3A%22%24identity_login_id%22%2C%22value%22%3A%221771f22d91134d999082fcbbb4169812%22%7D%2C%22%24device_id%22%3A%221908c86b9acce2-0a363853b7ccdf-1c525637-1484784-1908c86b9ad1b00%22%7D; _vid_t=4CSvytiDAhWFmemJAPthOGSAgGGGw0IlvknQJ6LIaCuycitk/87izHPDJ236WcveYWQwH4M7jtQh6YshsFpcMa2TcdroGky4so8hBwk=; mexc_fingerprint_visitorId=UF6dMjBAkzAYDvYvBUl7; mexc_fingerprint_requestId=1762159887912.IrcQH0; NEXT_LOCALE=zh-MY; _ga_L6XJCQTK75=GS2.1.s1762183216$o141$g0$t1762183216$j60$l0$h0; __cf_bm=VC.nFqo9_omyHY1inJ62l.pDZzwUhsFKu0Q3.MUuGS4-1762239809-1.0.1.1-As1E1qM9GIUT3bq50xMa3o1Amy3lK.MqicPCWF0Qs3WbkzBI15R_TaXmU8S3Q0FPsEMxwN.NSYY8aEevZ6c12gSRrKQQQAtCa4HQOYCprn8; CLIENT_LANG=zh-MY",
-								"type": "text",
-								"disabled": true
-							}
-						],
+						"header": [],
 						"body": {
 							"mode": "raw",
 							"raw": "{\"startTime\": \"1666612800000\",\"endTime\": \"1666612810000\",\"reverse\":0}",
